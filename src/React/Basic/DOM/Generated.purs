@@ -5,12 +5,14 @@
 module React.Basic.DOM.Generated where
 
 import Data.Nullable (Nullable)
+import Effect.Unsafe (unsafePerformEffect)
 import Foreign.Object (Object)
 import Prim.Row (class Union)
-import Web.DOM (Node)
 import React.Basic (JSX, ReactComponent, Ref, element)
 import React.Basic.DOM.Internal (CSS, unsafeCreateDOMComponent)
 import React.Basic.Events (EventHandler)
+import Unsafe.Coerce (unsafeCoerce)
+import Web.DOM (Node)
 
 type Props_a =
   ( _aria :: Object String
@@ -161,14 +163,18 @@ a
   -> JSX
 a = element a'
 
+a_ :: Array JSX -> JSX
+a_ children = a { children }
+
 a'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_a
   => ReactComponent (Record attrs)
-a' = unsafeCreateDOMComponent "a"
+a' = unsafeCoerce _a'
 
-a_ :: Array JSX -> JSX
-a_ children = a { children }
+_a'
+  :: ReactComponent (Record Props_a)
+_a' = unsafePerformEffect (unsafeCreateDOMComponent "a")
 
 type Props_abbr =
   ( _aria :: Object String
@@ -312,14 +318,18 @@ abbr
   -> JSX
 abbr = element abbr'
 
+abbr_ :: Array JSX -> JSX
+abbr_ children = abbr { children }
+
 abbr'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_abbr
   => ReactComponent (Record attrs)
-abbr' = unsafeCreateDOMComponent "abbr"
+abbr' = unsafeCoerce _abbr'
 
-abbr_ :: Array JSX -> JSX
-abbr_ children = abbr { children }
+_abbr'
+  :: ReactComponent (Record Props_abbr)
+_abbr' = unsafePerformEffect (unsafeCreateDOMComponent "abbr")
 
 type Props_address =
   ( _aria :: Object String
@@ -462,14 +472,18 @@ address
   -> JSX
 address = element address'
 
+address_ :: Array JSX -> JSX
+address_ children = address { children }
+
 address'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_address
   => ReactComponent (Record attrs)
-address' = unsafeCreateDOMComponent "address"
+address' = unsafeCoerce _address'
 
-address_ :: Array JSX -> JSX
-address_ children = address { children }
+_address'
+  :: ReactComponent (Record Props_address)
+_address' = unsafePerformEffect (unsafeCreateDOMComponent "address")
 
 type Props_area =
   ( _aria :: Object String
@@ -623,7 +637,11 @@ area'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_area
   => ReactComponent (Record attrs)
-area' = unsafeCreateDOMComponent "area"
+area' = unsafeCoerce _area'
+
+_area'
+  :: ReactComponent (Record Props_area)
+_area' = unsafePerformEffect (unsafeCreateDOMComponent "area")
 
 type Props_article =
   ( _aria :: Object String
@@ -766,14 +784,18 @@ article
   -> JSX
 article = element article'
 
+article_ :: Array JSX -> JSX
+article_ children = article { children }
+
 article'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_article
   => ReactComponent (Record attrs)
-article' = unsafeCreateDOMComponent "article"
+article' = unsafeCoerce _article'
 
-article_ :: Array JSX -> JSX
-article_ children = article { children }
+_article'
+  :: ReactComponent (Record Props_article)
+_article' = unsafePerformEffect (unsafeCreateDOMComponent "article")
 
 type Props_aside =
   ( _aria :: Object String
@@ -916,14 +938,18 @@ aside
   -> JSX
 aside = element aside'
 
+aside_ :: Array JSX -> JSX
+aside_ children = aside { children }
+
 aside'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_aside
   => ReactComponent (Record attrs)
-aside' = unsafeCreateDOMComponent "aside"
+aside' = unsafeCoerce _aside'
 
-aside_ :: Array JSX -> JSX
-aside_ children = aside { children }
+_aside'
+  :: ReactComponent (Record Props_aside)
+_aside' = unsafePerformEffect (unsafeCreateDOMComponent "aside")
 
 type Props_audio =
   ( _aria :: Object String
@@ -1095,14 +1121,18 @@ audio
   -> JSX
 audio = element audio'
 
+audio_ :: Array JSX -> JSX
+audio_ children = audio { children }
+
 audio'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_audio
   => ReactComponent (Record attrs)
-audio' = unsafeCreateDOMComponent "audio"
+audio' = unsafeCoerce _audio'
 
-audio_ :: Array JSX -> JSX
-audio_ children = audio { children }
+_audio'
+  :: ReactComponent (Record Props_audio)
+_audio' = unsafePerformEffect (unsafeCreateDOMComponent "audio")
 
 type Props_b =
   ( _aria :: Object String
@@ -1245,14 +1275,18 @@ b
   -> JSX
 b = element b'
 
+b_ :: Array JSX -> JSX
+b_ children = b { children }
+
 b'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_b
   => ReactComponent (Record attrs)
-b' = unsafeCreateDOMComponent "b"
+b' = unsafeCoerce _b'
 
-b_ :: Array JSX -> JSX
-b_ children = b { children }
+_b'
+  :: ReactComponent (Record Props_b)
+_b' = unsafePerformEffect (unsafeCreateDOMComponent "b")
 
 type Props_base =
   ( _aria :: Object String
@@ -1400,7 +1434,11 @@ base'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_base
   => ReactComponent (Record attrs)
-base' = unsafeCreateDOMComponent "base"
+base' = unsafeCoerce _base'
+
+_base'
+  :: ReactComponent (Record Props_base)
+_base' = unsafePerformEffect (unsafeCreateDOMComponent "base")
 
 type Props_bdi =
   ( _aria :: Object String
@@ -1543,14 +1581,18 @@ bdi
   -> JSX
 bdi = element bdi'
 
+bdi_ :: Array JSX -> JSX
+bdi_ children = bdi { children }
+
 bdi'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_bdi
   => ReactComponent (Record attrs)
-bdi' = unsafeCreateDOMComponent "bdi"
+bdi' = unsafeCoerce _bdi'
 
-bdi_ :: Array JSX -> JSX
-bdi_ children = bdi { children }
+_bdi'
+  :: ReactComponent (Record Props_bdi)
+_bdi' = unsafePerformEffect (unsafeCreateDOMComponent "bdi")
 
 type Props_bdo =
   ( _aria :: Object String
@@ -1694,14 +1736,18 @@ bdo
   -> JSX
 bdo = element bdo'
 
+bdo_ :: Array JSX -> JSX
+bdo_ children = bdo { children }
+
 bdo'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_bdo
   => ReactComponent (Record attrs)
-bdo' = unsafeCreateDOMComponent "bdo"
+bdo' = unsafeCoerce _bdo'
 
-bdo_ :: Array JSX -> JSX
-bdo_ children = bdo { children }
+_bdo'
+  :: ReactComponent (Record Props_bdo)
+_bdo' = unsafePerformEffect (unsafeCreateDOMComponent "bdo")
 
 type Props_blockquote =
   ( _aria :: Object String
@@ -1845,14 +1891,18 @@ blockquote
   -> JSX
 blockquote = element blockquote'
 
+blockquote_ :: Array JSX -> JSX
+blockquote_ children = blockquote { children }
+
 blockquote'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_blockquote
   => ReactComponent (Record attrs)
-blockquote' = unsafeCreateDOMComponent "blockquote"
+blockquote' = unsafeCoerce _blockquote'
 
-blockquote_ :: Array JSX -> JSX
-blockquote_ children = blockquote { children }
+_blockquote'
+  :: ReactComponent (Record Props_blockquote)
+_blockquote' = unsafePerformEffect (unsafeCreateDOMComponent "blockquote")
 
 type Props_body =
   ( _aria :: Object String
@@ -1995,14 +2045,18 @@ body
   -> JSX
 body = element body'
 
+body_ :: Array JSX -> JSX
+body_ children = body { children }
+
 body'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_body
   => ReactComponent (Record attrs)
-body' = unsafeCreateDOMComponent "body"
+body' = unsafeCoerce _body'
 
-body_ :: Array JSX -> JSX
-body_ children = body { children }
+_body'
+  :: ReactComponent (Record Props_body)
+_body' = unsafePerformEffect (unsafeCreateDOMComponent "body")
 
 type Props_br =
   ( _aria :: Object String
@@ -2148,7 +2202,11 @@ br'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_br
   => ReactComponent (Record attrs)
-br' = unsafeCreateDOMComponent "br"
+br' = unsafeCoerce _br'
+
+_br'
+  :: ReactComponent (Record Props_br)
+_br' = unsafePerformEffect (unsafeCreateDOMComponent "br")
 
 type Props_button =
   ( _aria :: Object String
@@ -2296,14 +2354,18 @@ button
   -> JSX
 button = element button'
 
+button_ :: Array JSX -> JSX
+button_ children = button { children }
+
 button'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_button
   => ReactComponent (Record attrs)
-button' = unsafeCreateDOMComponent "button"
+button' = unsafeCoerce _button'
 
-button_ :: Array JSX -> JSX
-button_ children = button { children }
+_button'
+  :: ReactComponent (Record Props_button)
+_button' = unsafePerformEffect (unsafeCreateDOMComponent "button")
 
 type Props_canvas =
   ( _aria :: Object String
@@ -2448,14 +2510,18 @@ canvas
   -> JSX
 canvas = element canvas'
 
+canvas_ :: Array JSX -> JSX
+canvas_ children = canvas { children }
+
 canvas'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_canvas
   => ReactComponent (Record attrs)
-canvas' = unsafeCreateDOMComponent "canvas"
+canvas' = unsafeCoerce _canvas'
 
-canvas_ :: Array JSX -> JSX
-canvas_ children = canvas { children }
+_canvas'
+  :: ReactComponent (Record Props_canvas)
+_canvas' = unsafePerformEffect (unsafeCreateDOMComponent "canvas")
 
 type Props_caption =
   ( _aria :: Object String
@@ -2598,14 +2664,18 @@ caption
   -> JSX
 caption = element caption'
 
+caption_ :: Array JSX -> JSX
+caption_ children = caption { children }
+
 caption'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_caption
   => ReactComponent (Record attrs)
-caption' = unsafeCreateDOMComponent "caption"
+caption' = unsafeCoerce _caption'
 
-caption_ :: Array JSX -> JSX
-caption_ children = caption { children }
+_caption'
+  :: ReactComponent (Record Props_caption)
+_caption' = unsafePerformEffect (unsafeCreateDOMComponent "caption")
 
 type Props_cite =
   ( _aria :: Object String
@@ -2748,14 +2818,18 @@ cite
   -> JSX
 cite = element cite'
 
+cite_ :: Array JSX -> JSX
+cite_ children = cite { children }
+
 cite'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_cite
   => ReactComponent (Record attrs)
-cite' = unsafeCreateDOMComponent "cite"
+cite' = unsafeCoerce _cite'
 
-cite_ :: Array JSX -> JSX
-cite_ children = cite { children }
+_cite'
+  :: ReactComponent (Record Props_cite)
+_cite' = unsafePerformEffect (unsafeCreateDOMComponent "cite")
 
 type Props_code =
   ( _aria :: Object String
@@ -2898,14 +2972,18 @@ code
   -> JSX
 code = element code'
 
+code_ :: Array JSX -> JSX
+code_ children = code { children }
+
 code'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_code
   => ReactComponent (Record attrs)
-code' = unsafeCreateDOMComponent "code"
+code' = unsafeCoerce _code'
 
-code_ :: Array JSX -> JSX
-code_ children = code { children }
+_code'
+  :: ReactComponent (Record Props_code)
+_code' = unsafePerformEffect (unsafeCreateDOMComponent "code")
 
 type Props_col =
   ( _aria :: Object String
@@ -3053,7 +3131,11 @@ col'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_col
   => ReactComponent (Record attrs)
-col' = unsafeCreateDOMComponent "col"
+col' = unsafeCoerce _col'
+
+_col'
+  :: ReactComponent (Record Props_col)
+_col' = unsafePerformEffect (unsafeCreateDOMComponent "col")
 
 type Props_colgroup =
   ( _aria :: Object String
@@ -3198,14 +3280,18 @@ colgroup
   -> JSX
 colgroup = element colgroup'
 
+colgroup_ :: Array JSX -> JSX
+colgroup_ children = colgroup { children }
+
 colgroup'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_colgroup
   => ReactComponent (Record attrs)
-colgroup' = unsafeCreateDOMComponent "colgroup"
+colgroup' = unsafeCoerce _colgroup'
 
-colgroup_ :: Array JSX -> JSX
-colgroup_ children = colgroup { children }
+_colgroup'
+  :: ReactComponent (Record Props_colgroup)
+_colgroup' = unsafePerformEffect (unsafeCreateDOMComponent "colgroup")
 
 type Props_data =
   ( _aria :: Object String
@@ -3349,14 +3435,18 @@ data'
   -> JSX
 data' = element data''
 
+data_ :: Array JSX -> JSX
+data_ children = data' { children }
+
 data''
   :: forall attrs attrs_
    . Union attrs attrs_ Props_data
   => ReactComponent (Record attrs)
-data'' = unsafeCreateDOMComponent "data"
+data'' = unsafeCoerce _data'
 
-data_ :: Array JSX -> JSX
-data_ children = data' { children }
+_data'
+  :: ReactComponent (Record Props_data)
+_data' = unsafePerformEffect (unsafeCreateDOMComponent "data")
 
 type Props_datalist =
   ( _aria :: Object String
@@ -3499,14 +3589,18 @@ datalist
   -> JSX
 datalist = element datalist'
 
+datalist_ :: Array JSX -> JSX
+datalist_ children = datalist { children }
+
 datalist'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_datalist
   => ReactComponent (Record attrs)
-datalist' = unsafeCreateDOMComponent "datalist"
+datalist' = unsafeCoerce _datalist'
 
-datalist_ :: Array JSX -> JSX
-datalist_ children = datalist { children }
+_datalist'
+  :: ReactComponent (Record Props_datalist)
+_datalist' = unsafePerformEffect (unsafeCreateDOMComponent "datalist")
 
 type Props_dd =
   ( _aria :: Object String
@@ -3649,14 +3743,18 @@ dd
   -> JSX
 dd = element dd'
 
+dd_ :: Array JSX -> JSX
+dd_ children = dd { children }
+
 dd'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_dd
   => ReactComponent (Record attrs)
-dd' = unsafeCreateDOMComponent "dd"
+dd' = unsafeCoerce _dd'
 
-dd_ :: Array JSX -> JSX
-dd_ children = dd { children }
+_dd'
+  :: ReactComponent (Record Props_dd)
+_dd' = unsafePerformEffect (unsafeCreateDOMComponent "dd")
 
 type Props_del =
   ( _aria :: Object String
@@ -3800,14 +3898,18 @@ del
   -> JSX
 del = element del'
 
+del_ :: Array JSX -> JSX
+del_ children = del { children }
+
 del'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_del
   => ReactComponent (Record attrs)
-del' = unsafeCreateDOMComponent "del"
+del' = unsafeCoerce _del'
 
-del_ :: Array JSX -> JSX
-del_ children = del { children }
+_del'
+  :: ReactComponent (Record Props_del)
+_del' = unsafePerformEffect (unsafeCreateDOMComponent "del")
 
 type Props_details =
   ( _aria :: Object String
@@ -3951,14 +4053,18 @@ details
   -> JSX
 details = element details'
 
+details_ :: Array JSX -> JSX
+details_ children = details { children }
+
 details'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_details
   => ReactComponent (Record attrs)
-details' = unsafeCreateDOMComponent "details"
+details' = unsafeCoerce _details'
 
-details_ :: Array JSX -> JSX
-details_ children = details { children }
+_details'
+  :: ReactComponent (Record Props_details)
+_details' = unsafePerformEffect (unsafeCreateDOMComponent "details")
 
 type Props_dfn =
   ( _aria :: Object String
@@ -4102,14 +4208,18 @@ dfn
   -> JSX
 dfn = element dfn'
 
+dfn_ :: Array JSX -> JSX
+dfn_ children = dfn { children }
+
 dfn'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_dfn
   => ReactComponent (Record attrs)
-dfn' = unsafeCreateDOMComponent "dfn"
+dfn' = unsafeCoerce _dfn'
 
-dfn_ :: Array JSX -> JSX
-dfn_ children = dfn { children }
+_dfn'
+  :: ReactComponent (Record Props_dfn)
+_dfn' = unsafePerformEffect (unsafeCreateDOMComponent "dfn")
 
 type Props_dialog =
   ( _aria :: Object String
@@ -4253,14 +4363,18 @@ dialog
   -> JSX
 dialog = element dialog'
 
+dialog_ :: Array JSX -> JSX
+dialog_ children = dialog { children }
+
 dialog'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_dialog
   => ReactComponent (Record attrs)
-dialog' = unsafeCreateDOMComponent "dialog"
+dialog' = unsafeCoerce _dialog'
 
-dialog_ :: Array JSX -> JSX
-dialog_ children = dialog { children }
+_dialog'
+  :: ReactComponent (Record Props_dialog)
+_dialog' = unsafePerformEffect (unsafeCreateDOMComponent "dialog")
 
 type Props_div =
   ( _aria :: Object String
@@ -4403,14 +4517,18 @@ div
   -> JSX
 div = element div'
 
+div_ :: Array JSX -> JSX
+div_ children = div { children }
+
 div'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_div
   => ReactComponent (Record attrs)
-div' = unsafeCreateDOMComponent "div"
+div' = unsafeCoerce _div'
 
-div_ :: Array JSX -> JSX
-div_ children = div { children }
+_div'
+  :: ReactComponent (Record Props_div)
+_div' = unsafePerformEffect (unsafeCreateDOMComponent "div")
 
 type Props_dl =
   ( _aria :: Object String
@@ -4553,14 +4671,18 @@ dl
   -> JSX
 dl = element dl'
 
+dl_ :: Array JSX -> JSX
+dl_ children = dl { children }
+
 dl'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_dl
   => ReactComponent (Record attrs)
-dl' = unsafeCreateDOMComponent "dl"
+dl' = unsafeCoerce _dl'
 
-dl_ :: Array JSX -> JSX
-dl_ children = dl { children }
+_dl'
+  :: ReactComponent (Record Props_dl)
+_dl' = unsafePerformEffect (unsafeCreateDOMComponent "dl")
 
 type Props_dt =
   ( _aria :: Object String
@@ -4703,14 +4825,18 @@ dt
   -> JSX
 dt = element dt'
 
+dt_ :: Array JSX -> JSX
+dt_ children = dt { children }
+
 dt'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_dt
   => ReactComponent (Record attrs)
-dt' = unsafeCreateDOMComponent "dt"
+dt' = unsafeCoerce _dt'
 
-dt_ :: Array JSX -> JSX
-dt_ children = dt { children }
+_dt'
+  :: ReactComponent (Record Props_dt)
+_dt' = unsafePerformEffect (unsafeCreateDOMComponent "dt")
 
 type Props_em =
   ( _aria :: Object String
@@ -4853,14 +4979,18 @@ em
   -> JSX
 em = element em'
 
+em_ :: Array JSX -> JSX
+em_ children = em { children }
+
 em'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_em
   => ReactComponent (Record attrs)
-em' = unsafeCreateDOMComponent "em"
+em' = unsafeCoerce _em'
 
-em_ :: Array JSX -> JSX
-em_ children = em { children }
+_em'
+  :: ReactComponent (Record Props_em)
+_em' = unsafePerformEffect (unsafeCreateDOMComponent "em")
 
 type Props_embed =
   ( _aria :: Object String
@@ -5010,7 +5140,11 @@ embed'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_embed
   => ReactComponent (Record attrs)
-embed' = unsafeCreateDOMComponent "embed"
+embed' = unsafeCoerce _embed'
+
+_embed'
+  :: ReactComponent (Record Props_embed)
+_embed' = unsafePerformEffect (unsafeCreateDOMComponent "embed")
 
 type Props_fieldset =
   ( _aria :: Object String
@@ -5156,14 +5290,18 @@ fieldset
   -> JSX
 fieldset = element fieldset'
 
+fieldset_ :: Array JSX -> JSX
+fieldset_ children = fieldset { children }
+
 fieldset'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_fieldset
   => ReactComponent (Record attrs)
-fieldset' = unsafeCreateDOMComponent "fieldset"
+fieldset' = unsafeCoerce _fieldset'
 
-fieldset_ :: Array JSX -> JSX
-fieldset_ children = fieldset { children }
+_fieldset'
+  :: ReactComponent (Record Props_fieldset)
+_fieldset' = unsafePerformEffect (unsafeCreateDOMComponent "fieldset")
 
 type Props_figcaption =
   ( _aria :: Object String
@@ -5306,14 +5444,18 @@ figcaption
   -> JSX
 figcaption = element figcaption'
 
+figcaption_ :: Array JSX -> JSX
+figcaption_ children = figcaption { children }
+
 figcaption'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_figcaption
   => ReactComponent (Record attrs)
-figcaption' = unsafeCreateDOMComponent "figcaption"
+figcaption' = unsafeCoerce _figcaption'
 
-figcaption_ :: Array JSX -> JSX
-figcaption_ children = figcaption { children }
+_figcaption'
+  :: ReactComponent (Record Props_figcaption)
+_figcaption' = unsafePerformEffect (unsafeCreateDOMComponent "figcaption")
 
 type Props_figure =
   ( _aria :: Object String
@@ -5456,14 +5598,18 @@ figure
   -> JSX
 figure = element figure'
 
+figure_ :: Array JSX -> JSX
+figure_ children = figure { children }
+
 figure'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_figure
   => ReactComponent (Record attrs)
-figure' = unsafeCreateDOMComponent "figure"
+figure' = unsafeCoerce _figure'
 
-figure_ :: Array JSX -> JSX
-figure_ children = figure { children }
+_figure'
+  :: ReactComponent (Record Props_figure)
+_figure' = unsafePerformEffect (unsafeCreateDOMComponent "figure")
 
 type Props_footer =
   ( _aria :: Object String
@@ -5606,14 +5752,18 @@ footer
   -> JSX
 footer = element footer'
 
+footer_ :: Array JSX -> JSX
+footer_ children = footer { children }
+
 footer'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_footer
   => ReactComponent (Record attrs)
-footer' = unsafeCreateDOMComponent "footer"
+footer' = unsafeCoerce _footer'
 
-footer_ :: Array JSX -> JSX
-footer_ children = footer { children }
+_footer'
+  :: ReactComponent (Record Props_footer)
+_footer' = unsafePerformEffect (unsafeCreateDOMComponent "footer")
 
 type Props_form =
   ( _aria :: Object String
@@ -5766,14 +5916,18 @@ form
   -> JSX
 form = element form'
 
+form_ :: Array JSX -> JSX
+form_ children = form { children }
+
 form'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_form
   => ReactComponent (Record attrs)
-form' = unsafeCreateDOMComponent "form"
+form' = unsafeCoerce _form'
 
-form_ :: Array JSX -> JSX
-form_ children = form { children }
+_form'
+  :: ReactComponent (Record Props_form)
+_form' = unsafePerformEffect (unsafeCreateDOMComponent "form")
 
 type Props_h1 =
   ( _aria :: Object String
@@ -5916,14 +6070,18 @@ h1
   -> JSX
 h1 = element h1'
 
+h1_ :: Array JSX -> JSX
+h1_ children = h1 { children }
+
 h1'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_h1
   => ReactComponent (Record attrs)
-h1' = unsafeCreateDOMComponent "h1"
+h1' = unsafeCoerce _h1'
 
-h1_ :: Array JSX -> JSX
-h1_ children = h1 { children }
+_h1'
+  :: ReactComponent (Record Props_h1)
+_h1' = unsafePerformEffect (unsafeCreateDOMComponent "h1")
 
 type Props_h2 =
   ( _aria :: Object String
@@ -6066,14 +6224,18 @@ h2
   -> JSX
 h2 = element h2'
 
+h2_ :: Array JSX -> JSX
+h2_ children = h2 { children }
+
 h2'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_h2
   => ReactComponent (Record attrs)
-h2' = unsafeCreateDOMComponent "h2"
+h2' = unsafeCoerce _h2'
 
-h2_ :: Array JSX -> JSX
-h2_ children = h2 { children }
+_h2'
+  :: ReactComponent (Record Props_h2)
+_h2' = unsafePerformEffect (unsafeCreateDOMComponent "h2")
 
 type Props_h3 =
   ( _aria :: Object String
@@ -6216,14 +6378,18 @@ h3
   -> JSX
 h3 = element h3'
 
+h3_ :: Array JSX -> JSX
+h3_ children = h3 { children }
+
 h3'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_h3
   => ReactComponent (Record attrs)
-h3' = unsafeCreateDOMComponent "h3"
+h3' = unsafeCoerce _h3'
 
-h3_ :: Array JSX -> JSX
-h3_ children = h3 { children }
+_h3'
+  :: ReactComponent (Record Props_h3)
+_h3' = unsafePerformEffect (unsafeCreateDOMComponent "h3")
 
 type Props_h4 =
   ( _aria :: Object String
@@ -6366,14 +6532,18 @@ h4
   -> JSX
 h4 = element h4'
 
+h4_ :: Array JSX -> JSX
+h4_ children = h4 { children }
+
 h4'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_h4
   => ReactComponent (Record attrs)
-h4' = unsafeCreateDOMComponent "h4"
+h4' = unsafeCoerce _h4'
 
-h4_ :: Array JSX -> JSX
-h4_ children = h4 { children }
+_h4'
+  :: ReactComponent (Record Props_h4)
+_h4' = unsafePerformEffect (unsafeCreateDOMComponent "h4")
 
 type Props_h5 =
   ( _aria :: Object String
@@ -6516,14 +6686,18 @@ h5
   -> JSX
 h5 = element h5'
 
+h5_ :: Array JSX -> JSX
+h5_ children = h5 { children }
+
 h5'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_h5
   => ReactComponent (Record attrs)
-h5' = unsafeCreateDOMComponent "h5"
+h5' = unsafeCoerce _h5'
 
-h5_ :: Array JSX -> JSX
-h5_ children = h5 { children }
+_h5'
+  :: ReactComponent (Record Props_h5)
+_h5' = unsafePerformEffect (unsafeCreateDOMComponent "h5")
 
 type Props_h6 =
   ( _aria :: Object String
@@ -6666,14 +6840,18 @@ h6
   -> JSX
 h6 = element h6'
 
+h6_ :: Array JSX -> JSX
+h6_ children = h6 { children }
+
 h6'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_h6
   => ReactComponent (Record attrs)
-h6' = unsafeCreateDOMComponent "h6"
+h6' = unsafeCoerce _h6'
 
-h6_ :: Array JSX -> JSX
-h6_ children = h6 { children }
+_h6'
+  :: ReactComponent (Record Props_h6)
+_h6' = unsafePerformEffect (unsafeCreateDOMComponent "h6")
 
 type Props_head =
   ( _aria :: Object String
@@ -6817,14 +6995,18 @@ head
   -> JSX
 head = element head'
 
+head_ :: Array JSX -> JSX
+head_ children = head { children }
+
 head'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_head
   => ReactComponent (Record attrs)
-head' = unsafeCreateDOMComponent "head"
+head' = unsafeCoerce _head'
 
-head_ :: Array JSX -> JSX
-head_ children = head { children }
+_head'
+  :: ReactComponent (Record Props_head)
+_head' = unsafePerformEffect (unsafeCreateDOMComponent "head")
 
 type Props_header =
   ( _aria :: Object String
@@ -6967,14 +7149,18 @@ header
   -> JSX
 header = element header'
 
+header_ :: Array JSX -> JSX
+header_ children = header { children }
+
 header'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_header
   => ReactComponent (Record attrs)
-header' = unsafeCreateDOMComponent "header"
+header' = unsafeCoerce _header'
 
-header_ :: Array JSX -> JSX
-header_ children = header { children }
+_header'
+  :: ReactComponent (Record Props_header)
+_header' = unsafePerformEffect (unsafeCreateDOMComponent "header")
 
 type Props_hgroup =
   ( _aria :: Object String
@@ -7117,14 +7303,18 @@ hgroup
   -> JSX
 hgroup = element hgroup'
 
+hgroup_ :: Array JSX -> JSX
+hgroup_ children = hgroup { children }
+
 hgroup'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_hgroup
   => ReactComponent (Record attrs)
-hgroup' = unsafeCreateDOMComponent "hgroup"
+hgroup' = unsafeCoerce _hgroup'
 
-hgroup_ :: Array JSX -> JSX
-hgroup_ children = hgroup { children }
+_hgroup'
+  :: ReactComponent (Record Props_hgroup)
+_hgroup' = unsafePerformEffect (unsafeCreateDOMComponent "hgroup")
 
 type Props_hr =
   ( _aria :: Object String
@@ -7272,7 +7462,11 @@ hr'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_hr
   => ReactComponent (Record attrs)
-hr' = unsafeCreateDOMComponent "hr"
+hr' = unsafeCoerce _hr'
+
+_hr'
+  :: ReactComponent (Record Props_hr)
+_hr' = unsafePerformEffect (unsafeCreateDOMComponent "hr")
 
 type Props_html =
   ( _aria :: Object String
@@ -7416,14 +7610,18 @@ html
   -> JSX
 html = element html'
 
+html_ :: Array JSX -> JSX
+html_ children = html { children }
+
 html'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_html
   => ReactComponent (Record attrs)
-html' = unsafeCreateDOMComponent "html"
+html' = unsafeCoerce _html'
 
-html_ :: Array JSX -> JSX
-html_ children = html { children }
+_html'
+  :: ReactComponent (Record Props_html)
+_html' = unsafePerformEffect (unsafeCreateDOMComponent "html")
 
 type Props_i =
   ( _aria :: Object String
@@ -7566,14 +7764,18 @@ i
   -> JSX
 i = element i'
 
+i_ :: Array JSX -> JSX
+i_ children = i { children }
+
 i'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_i
   => ReactComponent (Record attrs)
-i' = unsafeCreateDOMComponent "i"
+i' = unsafeCoerce _i'
 
-i_ :: Array JSX -> JSX
-i_ children = i { children }
+_i'
+  :: ReactComponent (Record Props_i)
+_i' = unsafePerformEffect (unsafeCreateDOMComponent "i")
 
 type Props_iframe =
   ( _aria :: Object String
@@ -7722,14 +7924,18 @@ iframe
   -> JSX
 iframe = element iframe'
 
+iframe_ :: Array JSX -> JSX
+iframe_ children = iframe { children }
+
 iframe'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_iframe
   => ReactComponent (Record attrs)
-iframe' = unsafeCreateDOMComponent "iframe"
+iframe' = unsafeCoerce _iframe'
 
-iframe_ :: Array JSX -> JSX
-iframe_ children = iframe { children }
+_iframe'
+  :: ReactComponent (Record Props_iframe)
+_iframe' = unsafePerformEffect (unsafeCreateDOMComponent "iframe")
 
 type Props_img =
   ( _aria :: Object String
@@ -7882,7 +8088,11 @@ img'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_img
   => ReactComponent (Record attrs)
-img' = unsafeCreateDOMComponent "img"
+img' = unsafeCoerce _img'
+
+_img'
+  :: ReactComponent (Record Props_img)
+_img' = unsafePerformEffect (unsafeCreateDOMComponent "img")
 
 type Props_input =
   ( _aria :: Object String
@@ -8057,7 +8267,11 @@ input'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_input
   => ReactComponent (Record attrs)
-input' = unsafeCreateDOMComponent "input"
+input' = unsafeCoerce _input'
+
+_input'
+  :: ReactComponent (Record Props_input)
+_input' = unsafePerformEffect (unsafeCreateDOMComponent "input")
 
 type Props_ins =
   ( _aria :: Object String
@@ -8201,14 +8415,18 @@ ins
   -> JSX
 ins = element ins'
 
+ins_ :: Array JSX -> JSX
+ins_ children = ins { children }
+
 ins'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_ins
   => ReactComponent (Record attrs)
-ins' = unsafeCreateDOMComponent "ins"
+ins' = unsafeCoerce _ins'
 
-ins_ :: Array JSX -> JSX
-ins_ children = ins { children }
+_ins'
+  :: ReactComponent (Record Props_ins)
+_ins' = unsafePerformEffect (unsafeCreateDOMComponent "ins")
 
 type Props_kbd =
   ( _aria :: Object String
@@ -8351,14 +8569,18 @@ kbd
   -> JSX
 kbd = element kbd'
 
+kbd_ :: Array JSX -> JSX
+kbd_ children = kbd { children }
+
 kbd'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_kbd
   => ReactComponent (Record attrs)
-kbd' = unsafeCreateDOMComponent "kbd"
+kbd' = unsafeCoerce _kbd'
 
-kbd_ :: Array JSX -> JSX
-kbd_ children = kbd { children }
+_kbd'
+  :: ReactComponent (Record Props_kbd)
+_kbd' = unsafePerformEffect (unsafeCreateDOMComponent "kbd")
 
 type Props_keygen =
   ( _aria :: Object String
@@ -8505,14 +8727,18 @@ keygen
   -> JSX
 keygen = element keygen'
 
+keygen_ :: Array JSX -> JSX
+keygen_ children = keygen { children }
+
 keygen'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_keygen
   => ReactComponent (Record attrs)
-keygen' = unsafeCreateDOMComponent "keygen"
+keygen' = unsafeCoerce _keygen'
 
-keygen_ :: Array JSX -> JSX
-keygen_ children = keygen { children }
+_keygen'
+  :: ReactComponent (Record Props_keygen)
+_keygen' = unsafePerformEffect (unsafeCreateDOMComponent "keygen")
 
 type Props_label =
   ( _aria :: Object String
@@ -8656,14 +8882,18 @@ label
   -> JSX
 label = element label'
 
+label_ :: Array JSX -> JSX
+label_ children = label { children }
+
 label'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_label
   => ReactComponent (Record attrs)
-label' = unsafeCreateDOMComponent "label"
+label' = unsafeCoerce _label'
 
-label_ :: Array JSX -> JSX
-label_ children = label { children }
+_label'
+  :: ReactComponent (Record Props_label)
+_label' = unsafePerformEffect (unsafeCreateDOMComponent "label")
 
 type Props_legend =
   ( _aria :: Object String
@@ -8806,14 +9036,18 @@ legend
   -> JSX
 legend = element legend'
 
+legend_ :: Array JSX -> JSX
+legend_ children = legend { children }
+
 legend'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_legend
   => ReactComponent (Record attrs)
-legend' = unsafeCreateDOMComponent "legend"
+legend' = unsafeCoerce _legend'
 
-legend_ :: Array JSX -> JSX
-legend_ children = legend { children }
+_legend'
+  :: ReactComponent (Record Props_legend)
+_legend' = unsafePerformEffect (unsafeCreateDOMComponent "legend")
 
 type Props_li =
   ( _aria :: Object String
@@ -8958,14 +9192,18 @@ li
   -> JSX
 li = element li'
 
+li_ :: Array JSX -> JSX
+li_ children = li { children }
+
 li'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_li
   => ReactComponent (Record attrs)
-li' = unsafeCreateDOMComponent "li"
+li' = unsafeCoerce _li'
 
-li_ :: Array JSX -> JSX
-li_ children = li { children }
+_li'
+  :: ReactComponent (Record Props_li)
+_li' = unsafePerformEffect (unsafeCreateDOMComponent "li")
 
 type Props_link =
   ( _aria :: Object String
@@ -9122,7 +9360,11 @@ link'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_link
   => ReactComponent (Record attrs)
-link' = unsafeCreateDOMComponent "link"
+link' = unsafeCoerce _link'
+
+_link'
+  :: ReactComponent (Record Props_link)
+_link' = unsafePerformEffect (unsafeCreateDOMComponent "link")
 
 type Props_main =
   ( _aria :: Object String
@@ -9265,14 +9507,18 @@ main
   -> JSX
 main = element main'
 
+main_ :: Array JSX -> JSX
+main_ children = main { children }
+
 main'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_main
   => ReactComponent (Record attrs)
-main' = unsafeCreateDOMComponent "main"
+main' = unsafeCoerce _main'
 
-main_ :: Array JSX -> JSX
-main_ children = main { children }
+_main'
+  :: ReactComponent (Record Props_main)
+_main' = unsafePerformEffect (unsafeCreateDOMComponent "main")
 
 type Props_map =
   ( _aria :: Object String
@@ -9416,14 +9662,18 @@ map
   -> JSX
 map = element map'
 
+map_ :: Array JSX -> JSX
+map_ children = map { children }
+
 map'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_map
   => ReactComponent (Record attrs)
-map' = unsafeCreateDOMComponent "map"
+map' = unsafeCoerce _map'
 
-map_ :: Array JSX -> JSX
-map_ children = map { children }
+_map'
+  :: ReactComponent (Record Props_map)
+_map' = unsafePerformEffect (unsafeCreateDOMComponent "map")
 
 type Props_mark =
   ( _aria :: Object String
@@ -9566,14 +9816,18 @@ mark
   -> JSX
 mark = element mark'
 
+mark_ :: Array JSX -> JSX
+mark_ children = mark { children }
+
 mark'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_mark
   => ReactComponent (Record attrs)
-mark' = unsafeCreateDOMComponent "mark"
+mark' = unsafeCoerce _mark'
 
-mark_ :: Array JSX -> JSX
-mark_ children = mark { children }
+_mark'
+  :: ReactComponent (Record Props_mark)
+_mark' = unsafePerformEffect (unsafeCreateDOMComponent "mark")
 
 type Props_math =
   ( _aria :: Object String
@@ -9716,14 +9970,18 @@ math
   -> JSX
 math = element math'
 
+math_ :: Array JSX -> JSX
+math_ children = math { children }
+
 math'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_math
   => ReactComponent (Record attrs)
-math' = unsafeCreateDOMComponent "math"
+math' = unsafeCoerce _math'
 
-math_ :: Array JSX -> JSX
-math_ children = math { children }
+_math'
+  :: ReactComponent (Record Props_math)
+_math' = unsafePerformEffect (unsafeCreateDOMComponent "math")
 
 type Props_menu =
   ( _aria :: Object String
@@ -9866,14 +10124,18 @@ menu
   -> JSX
 menu = element menu'
 
+menu_ :: Array JSX -> JSX
+menu_ children = menu { children }
+
 menu'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_menu
   => ReactComponent (Record attrs)
-menu' = unsafeCreateDOMComponent "menu"
+menu' = unsafeCoerce _menu'
 
-menu_ :: Array JSX -> JSX
-menu_ children = menu { children }
+_menu'
+  :: ReactComponent (Record Props_menu)
+_menu' = unsafePerformEffect (unsafeCreateDOMComponent "menu")
 
 type Props_menuitem =
   ( _aria :: Object String
@@ -10016,14 +10278,18 @@ menuitem
   -> JSX
 menuitem = element menuitem'
 
+menuitem_ :: Array JSX -> JSX
+menuitem_ children = menuitem { children }
+
 menuitem'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_menuitem
   => ReactComponent (Record attrs)
-menuitem' = unsafeCreateDOMComponent "menuitem"
+menuitem' = unsafeCoerce _menuitem'
 
-menuitem_ :: Array JSX -> JSX
-menuitem_ children = menuitem { children }
+_menuitem'
+  :: ReactComponent (Record Props_menuitem)
+_menuitem' = unsafePerformEffect (unsafeCreateDOMComponent "menuitem")
 
 type Props_meta =
   ( _aria :: Object String
@@ -10171,7 +10437,11 @@ meta'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_meta
   => ReactComponent (Record attrs)
-meta' = unsafeCreateDOMComponent "meta"
+meta' = unsafeCoerce _meta'
+
+_meta'
+  :: ReactComponent (Record Props_meta)
+_meta' = unsafePerformEffect (unsafeCreateDOMComponent "meta")
 
 type Props_meter =
   ( _aria :: Object String
@@ -10320,14 +10590,18 @@ meter
   -> JSX
 meter = element meter'
 
+meter_ :: Array JSX -> JSX
+meter_ children = meter { children }
+
 meter'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_meter
   => ReactComponent (Record attrs)
-meter' = unsafeCreateDOMComponent "meter"
+meter' = unsafeCoerce _meter'
 
-meter_ :: Array JSX -> JSX
-meter_ children = meter { children }
+_meter'
+  :: ReactComponent (Record Props_meter)
+_meter' = unsafePerformEffect (unsafeCreateDOMComponent "meter")
 
 type Props_nav =
   ( _aria :: Object String
@@ -10470,14 +10744,18 @@ nav
   -> JSX
 nav = element nav'
 
+nav_ :: Array JSX -> JSX
+nav_ children = nav { children }
+
 nav'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_nav
   => ReactComponent (Record attrs)
-nav' = unsafeCreateDOMComponent "nav"
+nav' = unsafeCoerce _nav'
 
-nav_ :: Array JSX -> JSX
-nav_ children = nav { children }
+_nav'
+  :: ReactComponent (Record Props_nav)
+_nav' = unsafePerformEffect (unsafeCreateDOMComponent "nav")
 
 type Props_noscript =
   ( _aria :: Object String
@@ -10620,14 +10898,18 @@ noscript
   -> JSX
 noscript = element noscript'
 
+noscript_ :: Array JSX -> JSX
+noscript_ children = noscript { children }
+
 noscript'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_noscript
   => ReactComponent (Record attrs)
-noscript' = unsafeCreateDOMComponent "noscript"
+noscript' = unsafeCoerce _noscript'
 
-noscript_ :: Array JSX -> JSX
-noscript_ children = noscript { children }
+_noscript'
+  :: ReactComponent (Record Props_noscript)
+_noscript' = unsafePerformEffect (unsafeCreateDOMComponent "noscript")
 
 type Props_object =
   ( _aria :: Object String
@@ -10776,14 +11058,18 @@ object
   -> JSX
 object = element object'
 
+object_ :: Array JSX -> JSX
+object_ children = object { children }
+
 object'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_object
   => ReactComponent (Record attrs)
-object' = unsafeCreateDOMComponent "object"
+object' = unsafeCoerce _object'
 
-object_ :: Array JSX -> JSX
-object_ children = object { children }
+_object'
+  :: ReactComponent (Record Props_object)
+_object' = unsafePerformEffect (unsafeCreateDOMComponent "object")
 
 type Props_ol =
   ( _aria :: Object String
@@ -10929,14 +11215,18 @@ ol
   -> JSX
 ol = element ol'
 
+ol_ :: Array JSX -> JSX
+ol_ children = ol { children }
+
 ol'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_ol
   => ReactComponent (Record attrs)
-ol' = unsafeCreateDOMComponent "ol"
+ol' = unsafeCoerce _ol'
 
-ol_ :: Array JSX -> JSX
-ol_ children = ol { children }
+_ol'
+  :: ReactComponent (Record Props_ol)
+_ol' = unsafePerformEffect (unsafeCreateDOMComponent "ol")
 
 type Props_optgroup =
   ( _aria :: Object String
@@ -11081,14 +11371,18 @@ optgroup
   -> JSX
 optgroup = element optgroup'
 
+optgroup_ :: Array JSX -> JSX
+optgroup_ children = optgroup { children }
+
 optgroup'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_optgroup
   => ReactComponent (Record attrs)
-optgroup' = unsafeCreateDOMComponent "optgroup"
+optgroup' = unsafeCoerce _optgroup'
 
-optgroup_ :: Array JSX -> JSX
-optgroup_ children = optgroup { children }
+_optgroup'
+  :: ReactComponent (Record Props_optgroup)
+_optgroup' = unsafePerformEffect (unsafeCreateDOMComponent "optgroup")
 
 type Props_option =
   ( _aria :: Object String
@@ -11235,14 +11529,18 @@ option
   -> JSX
 option = element option'
 
+option_ :: Array JSX -> JSX
+option_ children = option { children }
+
 option'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_option
   => ReactComponent (Record attrs)
-option' = unsafeCreateDOMComponent "option"
+option' = unsafeCoerce _option'
 
-option_ :: Array JSX -> JSX
-option_ children = option { children }
+_option'
+  :: ReactComponent (Record Props_option)
+_option' = unsafePerformEffect (unsafeCreateDOMComponent "option")
 
 type Props_output =
   ( _aria :: Object String
@@ -11387,14 +11685,18 @@ output
   -> JSX
 output = element output'
 
+output_ :: Array JSX -> JSX
+output_ children = output { children }
+
 output'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_output
   => ReactComponent (Record attrs)
-output' = unsafeCreateDOMComponent "output"
+output' = unsafeCoerce _output'
 
-output_ :: Array JSX -> JSX
-output_ children = output { children }
+_output'
+  :: ReactComponent (Record Props_output)
+_output' = unsafePerformEffect (unsafeCreateDOMComponent "output")
 
 type Props_p =
   ( _aria :: Object String
@@ -11537,14 +11839,18 @@ p
   -> JSX
 p = element p'
 
+p_ :: Array JSX -> JSX
+p_ children = p { children }
+
 p'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_p
   => ReactComponent (Record attrs)
-p' = unsafeCreateDOMComponent "p"
+p' = unsafeCoerce _p'
 
-p_ :: Array JSX -> JSX
-p_ children = p { children }
+_p'
+  :: ReactComponent (Record Props_p)
+_p' = unsafePerformEffect (unsafeCreateDOMComponent "p")
 
 type Props_param =
   ( _aria :: Object String
@@ -11693,7 +11999,11 @@ param'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_param
   => ReactComponent (Record attrs)
-param' = unsafeCreateDOMComponent "param"
+param' = unsafeCoerce _param'
+
+_param'
+  :: ReactComponent (Record Props_param)
+_param' = unsafePerformEffect (unsafeCreateDOMComponent "param")
 
 type Props_picture =
   ( _aria :: Object String
@@ -11836,14 +12146,18 @@ picture
   -> JSX
 picture = element picture'
 
+picture_ :: Array JSX -> JSX
+picture_ children = picture { children }
+
 picture'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_picture
   => ReactComponent (Record attrs)
-picture' = unsafeCreateDOMComponent "picture"
+picture' = unsafeCoerce _picture'
 
-picture_ :: Array JSX -> JSX
-picture_ children = picture { children }
+_picture'
+  :: ReactComponent (Record Props_picture)
+_picture' = unsafePerformEffect (unsafeCreateDOMComponent "picture")
 
 type Props_pre =
   ( _aria :: Object String
@@ -11987,14 +12301,18 @@ pre
   -> JSX
 pre = element pre'
 
+pre_ :: Array JSX -> JSX
+pre_ children = pre { children }
+
 pre'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_pre
   => ReactComponent (Record attrs)
-pre' = unsafeCreateDOMComponent "pre"
+pre' = unsafeCoerce _pre'
 
-pre_ :: Array JSX -> JSX
-pre_ children = pre { children }
+_pre'
+  :: ReactComponent (Record Props_pre)
+_pre' = unsafePerformEffect (unsafeCreateDOMComponent "pre")
 
 type Props_progress =
   ( _aria :: Object String
@@ -12139,14 +12457,18 @@ progress
   -> JSX
 progress = element progress'
 
+progress_ :: Array JSX -> JSX
+progress_ children = progress { children }
+
 progress'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_progress
   => ReactComponent (Record attrs)
-progress' = unsafeCreateDOMComponent "progress"
+progress' = unsafeCoerce _progress'
 
-progress_ :: Array JSX -> JSX
-progress_ children = progress { children }
+_progress'
+  :: ReactComponent (Record Props_progress)
+_progress' = unsafePerformEffect (unsafeCreateDOMComponent "progress")
 
 type Props_q =
   ( _aria :: Object String
@@ -12290,14 +12612,18 @@ q
   -> JSX
 q = element q'
 
+q_ :: Array JSX -> JSX
+q_ children = q { children }
+
 q'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_q
   => ReactComponent (Record attrs)
-q' = unsafeCreateDOMComponent "q"
+q' = unsafeCoerce _q'
 
-q_ :: Array JSX -> JSX
-q_ children = q { children }
+_q'
+  :: ReactComponent (Record Props_q)
+_q' = unsafePerformEffect (unsafeCreateDOMComponent "q")
 
 type Props_rb =
   ( _aria :: Object String
@@ -12440,14 +12766,18 @@ rb
   -> JSX
 rb = element rb'
 
+rb_ :: Array JSX -> JSX
+rb_ children = rb { children }
+
 rb'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_rb
   => ReactComponent (Record attrs)
-rb' = unsafeCreateDOMComponent "rb"
+rb' = unsafeCoerce _rb'
 
-rb_ :: Array JSX -> JSX
-rb_ children = rb { children }
+_rb'
+  :: ReactComponent (Record Props_rb)
+_rb' = unsafePerformEffect (unsafeCreateDOMComponent "rb")
 
 type Props_rp =
   ( _aria :: Object String
@@ -12590,14 +12920,18 @@ rp
   -> JSX
 rp = element rp'
 
+rp_ :: Array JSX -> JSX
+rp_ children = rp { children }
+
 rp'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_rp
   => ReactComponent (Record attrs)
-rp' = unsafeCreateDOMComponent "rp"
+rp' = unsafeCoerce _rp'
 
-rp_ :: Array JSX -> JSX
-rp_ children = rp { children }
+_rp'
+  :: ReactComponent (Record Props_rp)
+_rp' = unsafePerformEffect (unsafeCreateDOMComponent "rp")
 
 type Props_rt =
   ( _aria :: Object String
@@ -12740,14 +13074,18 @@ rt
   -> JSX
 rt = element rt'
 
+rt_ :: Array JSX -> JSX
+rt_ children = rt { children }
+
 rt'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_rt
   => ReactComponent (Record attrs)
-rt' = unsafeCreateDOMComponent "rt"
+rt' = unsafeCoerce _rt'
 
-rt_ :: Array JSX -> JSX
-rt_ children = rt { children }
+_rt'
+  :: ReactComponent (Record Props_rt)
+_rt' = unsafePerformEffect (unsafeCreateDOMComponent "rt")
 
 type Props_rtc =
   ( _aria :: Object String
@@ -12890,14 +13228,18 @@ rtc
   -> JSX
 rtc = element rtc'
 
+rtc_ :: Array JSX -> JSX
+rtc_ children = rtc { children }
+
 rtc'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_rtc
   => ReactComponent (Record attrs)
-rtc' = unsafeCreateDOMComponent "rtc"
+rtc' = unsafeCoerce _rtc'
 
-rtc_ :: Array JSX -> JSX
-rtc_ children = rtc { children }
+_rtc'
+  :: ReactComponent (Record Props_rtc)
+_rtc' = unsafePerformEffect (unsafeCreateDOMComponent "rtc")
 
 type Props_ruby =
   ( _aria :: Object String
@@ -13040,14 +13382,18 @@ ruby
   -> JSX
 ruby = element ruby'
 
+ruby_ :: Array JSX -> JSX
+ruby_ children = ruby { children }
+
 ruby'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_ruby
   => ReactComponent (Record attrs)
-ruby' = unsafeCreateDOMComponent "ruby"
+ruby' = unsafeCoerce _ruby'
 
-ruby_ :: Array JSX -> JSX
-ruby_ children = ruby { children }
+_ruby'
+  :: ReactComponent (Record Props_ruby)
+_ruby' = unsafePerformEffect (unsafeCreateDOMComponent "ruby")
 
 type Props_s =
   ( _aria :: Object String
@@ -13190,14 +13536,18 @@ s
   -> JSX
 s = element s'
 
+s_ :: Array JSX -> JSX
+s_ children = s { children }
+
 s'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_s
   => ReactComponent (Record attrs)
-s' = unsafeCreateDOMComponent "s"
+s' = unsafeCoerce _s'
 
-s_ :: Array JSX -> JSX
-s_ children = s { children }
+_s'
+  :: ReactComponent (Record Props_s)
+_s' = unsafePerformEffect (unsafeCreateDOMComponent "s")
 
 type Props_samp =
   ( _aria :: Object String
@@ -13340,14 +13690,18 @@ samp
   -> JSX
 samp = element samp'
 
+samp_ :: Array JSX -> JSX
+samp_ children = samp { children }
+
 samp'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_samp
   => ReactComponent (Record attrs)
-samp' = unsafeCreateDOMComponent "samp"
+samp' = unsafeCoerce _samp'
 
-samp_ :: Array JSX -> JSX
-samp_ children = samp { children }
+_samp'
+  :: ReactComponent (Record Props_samp)
+_samp' = unsafePerformEffect (unsafeCreateDOMComponent "samp")
 
 type Props_script =
   ( _aria :: Object String
@@ -13496,14 +13850,18 @@ script
   -> JSX
 script = element script'
 
+script_ :: Array JSX -> JSX
+script_ children = script { children }
+
 script'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_script
   => ReactComponent (Record attrs)
-script' = unsafeCreateDOMComponent "script"
+script' = unsafeCoerce _script'
 
-script_ :: Array JSX -> JSX
-script_ children = script { children }
+_script'
+  :: ReactComponent (Record Props_script)
+_script' = unsafePerformEffect (unsafeCreateDOMComponent "script")
 
 type Props_section =
   ( _aria :: Object String
@@ -13646,14 +14004,18 @@ section
   -> JSX
 section = element section'
 
+section_ :: Array JSX -> JSX
+section_ children = section { children }
+
 section'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_section
   => ReactComponent (Record attrs)
-section' = unsafeCreateDOMComponent "section"
+section' = unsafeCoerce _section'
 
-section_ :: Array JSX -> JSX
-section_ children = section { children }
+_section'
+  :: ReactComponent (Record Props_section)
+_section' = unsafePerformEffect (unsafeCreateDOMComponent "section")
 
 type Props_select =
   ( _aria :: Object String
@@ -13806,14 +14168,18 @@ select
   -> JSX
 select = element select'
 
+select_ :: Array JSX -> JSX
+select_ children = select { children }
+
 select'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_select
   => ReactComponent (Record attrs)
-select' = unsafeCreateDOMComponent "select"
+select' = unsafeCoerce _select'
 
-select_ :: Array JSX -> JSX
-select_ children = select { children }
+_select'
+  :: ReactComponent (Record Props_select)
+_select' = unsafePerformEffect (unsafeCreateDOMComponent "select")
 
 type Props_slot =
   ( _aria :: Object String
@@ -13957,14 +14323,18 @@ slot
   -> JSX
 slot = element slot'
 
+slot_ :: Array JSX -> JSX
+slot_ children = slot { children }
+
 slot'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_slot
   => ReactComponent (Record attrs)
-slot' = unsafeCreateDOMComponent "slot"
+slot' = unsafeCoerce _slot'
 
-slot_ :: Array JSX -> JSX
-slot_ children = slot { children }
+_slot'
+  :: ReactComponent (Record Props_slot)
+_slot' = unsafePerformEffect (unsafeCreateDOMComponent "slot")
 
 type Props_small =
   ( _aria :: Object String
@@ -14107,14 +14477,18 @@ small
   -> JSX
 small = element small'
 
+small_ :: Array JSX -> JSX
+small_ children = small { children }
+
 small'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_small
   => ReactComponent (Record attrs)
-small' = unsafeCreateDOMComponent "small"
+small' = unsafeCoerce _small'
 
-small_ :: Array JSX -> JSX
-small_ children = small { children }
+_small'
+  :: ReactComponent (Record Props_small)
+_small' = unsafePerformEffect (unsafeCreateDOMComponent "small")
 
 type Props_source =
   ( _aria :: Object String
@@ -14264,7 +14638,11 @@ source'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_source
   => ReactComponent (Record attrs)
-source' = unsafeCreateDOMComponent "source"
+source' = unsafeCoerce _source'
+
+_source'
+  :: ReactComponent (Record Props_source)
+_source' = unsafePerformEffect (unsafeCreateDOMComponent "source")
 
 type Props_span =
   ( _aria :: Object String
@@ -14407,14 +14785,18 @@ span
   -> JSX
 span = element span'
 
+span_ :: Array JSX -> JSX
+span_ children = span { children }
+
 span'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_span
   => ReactComponent (Record attrs)
-span' = unsafeCreateDOMComponent "span"
+span' = unsafeCoerce _span'
 
-span_ :: Array JSX -> JSX
-span_ children = span { children }
+_span'
+  :: ReactComponent (Record Props_span)
+_span' = unsafePerformEffect (unsafeCreateDOMComponent "span")
 
 type Props_strong =
   ( _aria :: Object String
@@ -14557,14 +14939,18 @@ strong
   -> JSX
 strong = element strong'
 
+strong_ :: Array JSX -> JSX
+strong_ children = strong { children }
+
 strong'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_strong
   => ReactComponent (Record attrs)
-strong' = unsafeCreateDOMComponent "strong"
+strong' = unsafeCoerce _strong'
 
-strong_ :: Array JSX -> JSX
-strong_ children = strong { children }
+_strong'
+  :: ReactComponent (Record Props_strong)
+_strong' = unsafePerformEffect (unsafeCreateDOMComponent "strong")
 
 type Props_style =
   ( _aria :: Object String
@@ -14711,14 +15097,18 @@ style
   -> JSX
 style = element style'
 
+style_ :: Array JSX -> JSX
+style_ children = style { children }
+
 style'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_style
   => ReactComponent (Record attrs)
-style' = unsafeCreateDOMComponent "style"
+style' = unsafeCoerce _style'
 
-style_ :: Array JSX -> JSX
-style_ children = style { children }
+_style'
+  :: ReactComponent (Record Props_style)
+_style' = unsafePerformEffect (unsafeCreateDOMComponent "style")
 
 type Props_sub =
   ( _aria :: Object String
@@ -14861,14 +15251,18 @@ sub
   -> JSX
 sub = element sub'
 
+sub_ :: Array JSX -> JSX
+sub_ children = sub { children }
+
 sub'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_sub
   => ReactComponent (Record attrs)
-sub' = unsafeCreateDOMComponent "sub"
+sub' = unsafeCoerce _sub'
 
-sub_ :: Array JSX -> JSX
-sub_ children = sub { children }
+_sub'
+  :: ReactComponent (Record Props_sub)
+_sub' = unsafePerformEffect (unsafeCreateDOMComponent "sub")
 
 type Props_summary =
   ( _aria :: Object String
@@ -15011,14 +15405,18 @@ summary
   -> JSX
 summary = element summary'
 
+summary_ :: Array JSX -> JSX
+summary_ children = summary { children }
+
 summary'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_summary
   => ReactComponent (Record attrs)
-summary' = unsafeCreateDOMComponent "summary"
+summary' = unsafeCoerce _summary'
 
-summary_ :: Array JSX -> JSX
-summary_ children = summary { children }
+_summary'
+  :: ReactComponent (Record Props_summary)
+_summary' = unsafePerformEffect (unsafeCreateDOMComponent "summary")
 
 type Props_sup =
   ( _aria :: Object String
@@ -15161,14 +15559,18 @@ sup
   -> JSX
 sup = element sup'
 
+sup_ :: Array JSX -> JSX
+sup_ children = sup { children }
+
 sup'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_sup
   => ReactComponent (Record attrs)
-sup' = unsafeCreateDOMComponent "sup"
+sup' = unsafeCoerce _sup'
 
-sup_ :: Array JSX -> JSX
-sup_ children = sup { children }
+_sup'
+  :: ReactComponent (Record Props_sup)
+_sup' = unsafePerformEffect (unsafeCreateDOMComponent "sup")
 
 
 type Props_table =
@@ -15314,14 +15716,18 @@ table
   -> JSX
 table = element table'
 
+table_ :: Array JSX -> JSX
+table_ children = table { children }
+
 table'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_table
   => ReactComponent (Record attrs)
-table' = unsafeCreateDOMComponent "table"
+table' = unsafeCoerce _table'
 
-table_ :: Array JSX -> JSX
-table_ children = table { children }
+_table'
+  :: ReactComponent (Record Props_table)
+_table' = unsafePerformEffect (unsafeCreateDOMComponent "table")
 
 type Props_tbody =
   ( _aria :: Object String
@@ -15464,14 +15870,18 @@ tbody
   -> JSX
 tbody = element tbody'
 
+tbody_ :: Array JSX -> JSX
+tbody_ children = tbody { children }
+
 tbody'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_tbody
   => ReactComponent (Record attrs)
-tbody' = unsafeCreateDOMComponent "tbody"
+tbody' = unsafeCoerce _tbody'
 
-tbody_ :: Array JSX -> JSX
-tbody_ children = tbody { children }
+_tbody'
+  :: ReactComponent (Record Props_tbody)
+_tbody' = unsafePerformEffect (unsafeCreateDOMComponent "tbody")
 
 type Props_td =
   ( _aria :: Object String
@@ -15618,14 +16028,18 @@ td
   -> JSX
 td = element td'
 
+td_ :: Array JSX -> JSX
+td_ children = td { children }
+
 td'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_td
   => ReactComponent (Record attrs)
-td' = unsafeCreateDOMComponent "td"
+td' = unsafeCoerce _td'
 
-td_ :: Array JSX -> JSX
-td_ children = td { children }
+_td'
+  :: ReactComponent (Record Props_td)
+_td' = unsafePerformEffect (unsafeCreateDOMComponent "td")
 
 type Props_template =
   ( _aria :: Object String
@@ -15768,14 +16182,18 @@ template
   -> JSX
 template = element template'
 
+template_ :: Array JSX -> JSX
+template_ children = template { children }
+
 template'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_template
   => ReactComponent (Record attrs)
-template' = unsafeCreateDOMComponent "template"
+template' = unsafeCoerce _template'
 
-template_ :: Array JSX -> JSX
-template_ children = template { children }
+_template'
+  :: ReactComponent (Record Props_template)
+_template' = unsafePerformEffect (unsafeCreateDOMComponent "template")
 
 type Props_textarea =
   ( _aria :: Object String
@@ -15932,14 +16350,18 @@ textarea
   -> JSX
 textarea = element textarea'
 
+textarea_ :: Array JSX -> JSX
+textarea_ children = textarea { children }
+
 textarea'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_textarea
   => ReactComponent (Record attrs)
-textarea' = unsafeCreateDOMComponent "textarea"
+textarea' = unsafeCoerce _textarea'
 
-textarea_ :: Array JSX -> JSX
-textarea_ children = textarea { children }
+_textarea'
+  :: ReactComponent (Record Props_textarea)
+_textarea' = unsafePerformEffect (unsafeCreateDOMComponent "textarea")
 
 type Props_tfoot =
   ( _aria :: Object String
@@ -16082,14 +16504,18 @@ tfoot
   -> JSX
 tfoot = element tfoot'
 
+tfoot_ :: Array JSX -> JSX
+tfoot_ children = tfoot { children }
+
 tfoot'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_tfoot
   => ReactComponent (Record attrs)
-tfoot' = unsafeCreateDOMComponent "tfoot"
+tfoot' = unsafeCoerce _tfoot'
 
-tfoot_ :: Array JSX -> JSX
-tfoot_ children = tfoot { children }
+_tfoot'
+  :: ReactComponent (Record Props_tfoot)
+_tfoot' = unsafePerformEffect (unsafeCreateDOMComponent "tfoot")
 
 type Props_th =
   ( _aria :: Object String
@@ -16236,14 +16662,18 @@ th
   -> JSX
 th = element th'
 
+th_ :: Array JSX -> JSX
+th_ children = th { children }
+
 th'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_th
   => ReactComponent (Record attrs)
-th' = unsafeCreateDOMComponent "th"
+th' = unsafeCoerce _th'
 
-th_ :: Array JSX -> JSX
-th_ children = th { children }
+_th'
+  :: ReactComponent (Record Props_th)
+_th' = unsafePerformEffect (unsafeCreateDOMComponent "th")
 
 type Props_thead =
   ( _aria :: Object String
@@ -16386,14 +16816,18 @@ thead
   -> JSX
 thead = element thead'
 
+thead_ :: Array JSX -> JSX
+thead_ children = thead { children }
+
 thead'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_thead
   => ReactComponent (Record attrs)
-thead' = unsafeCreateDOMComponent "thead"
+thead' = unsafeCoerce _thead'
 
-thead_ :: Array JSX -> JSX
-thead_ children = thead { children }
+_thead'
+  :: ReactComponent (Record Props_thead)
+_thead' = unsafePerformEffect (unsafeCreateDOMComponent "thead")
 
 type Props_time =
   ( _aria :: Object String
@@ -16536,14 +16970,18 @@ time
   -> JSX
 time = element time'
 
+time_ :: Array JSX -> JSX
+time_ children = time { children }
+
 time'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_time
   => ReactComponent (Record attrs)
-time' = unsafeCreateDOMComponent "time"
+time' = unsafeCoerce _time'
 
-time_ :: Array JSX -> JSX
-time_ children = time { children }
+_time'
+  :: ReactComponent (Record Props_time)
+_time' = unsafePerformEffect (unsafeCreateDOMComponent "time")
 
 type Props_title =
   ( _aria :: Object String
@@ -16686,14 +17124,18 @@ title
   -> JSX
 title = element title'
 
+title_ :: Array JSX -> JSX
+title_ children = title { children }
+
 title'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_title
   => ReactComponent (Record attrs)
-title' = unsafeCreateDOMComponent "title"
+title' = unsafeCoerce _title'
 
-title_ :: Array JSX -> JSX
-title_ children = title { children }
+_title'
+  :: ReactComponent (Record Props_title)
+_title' = unsafePerformEffect (unsafeCreateDOMComponent "title")
 
 type Props_tr =
   ( _aria :: Object String
@@ -16836,14 +17278,18 @@ tr
   -> JSX
 tr = element tr'
 
+tr_ :: Array JSX -> JSX
+tr_ children = tr { children }
+
 tr'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_tr
   => ReactComponent (Record attrs)
-tr' = unsafeCreateDOMComponent "tr"
+tr' = unsafeCoerce _tr'
 
-tr_ :: Array JSX -> JSX
-tr_ children = tr { children }
+_tr'
+  :: ReactComponent (Record Props_tr)
+_tr' = unsafePerformEffect (unsafeCreateDOMComponent "tr")
 
 type Props_track =
   ( _aria :: Object String
@@ -16993,7 +17439,11 @@ track'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_track
   => ReactComponent (Record attrs)
-track' = unsafeCreateDOMComponent "track"
+track' = unsafeCoerce _track'
+
+_track'
+  :: ReactComponent (Record Props_track)
+_track' = unsafePerformEffect (unsafeCreateDOMComponent "track")
 
 type Props_u =
   ( _aria :: Object String
@@ -17136,14 +17586,18 @@ u
   -> JSX
 u = element u'
 
+u_ :: Array JSX -> JSX
+u_ children = u { children }
+
 u'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_u
   => ReactComponent (Record attrs)
-u' = unsafeCreateDOMComponent "u"
+u' = unsafeCoerce _u'
 
-u_ :: Array JSX -> JSX
-u_ children = u { children }
+_u'
+  :: ReactComponent (Record Props_u)
+_u' = unsafePerformEffect (unsafeCreateDOMComponent "u")
 
 type Props_ul =
   ( _aria :: Object String
@@ -17287,14 +17741,18 @@ ul
   -> JSX
 ul = element ul'
 
+ul_ :: Array JSX -> JSX
+ul_ children = ul { children }
+
 ul'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_ul
   => ReactComponent (Record attrs)
-ul' = unsafeCreateDOMComponent "ul"
+ul' = unsafeCoerce _ul'
 
-ul_ :: Array JSX -> JSX
-ul_ children = ul { children }
+_ul'
+  :: ReactComponent (Record Props_ul)
+_ul' = unsafePerformEffect (unsafeCreateDOMComponent "ul")
 
 type Props_var =
   ( _aria :: Object String
@@ -17437,14 +17895,18 @@ var
   -> JSX
 var = element var'
 
+var_ :: Array JSX -> JSX
+var_ children = var { children }
+
 var'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_var
   => ReactComponent (Record attrs)
-var' = unsafeCreateDOMComponent "var"
+var' = unsafeCoerce _var'
 
-var_ :: Array JSX -> JSX
-var_ children = var { children }
+_var'
+  :: ReactComponent (Record Props_var)
+_var' = unsafePerformEffect (unsafeCreateDOMComponent "var")
 
 type Props_video =
   ( _aria :: Object String
@@ -17587,14 +18049,18 @@ video
   -> JSX
 video = element video'
 
+video_ :: Array JSX -> JSX
+video_ children = video { children }
+
 video'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_video
   => ReactComponent (Record attrs)
-video' = unsafeCreateDOMComponent "video"
+video' = unsafeCoerce _video'
 
-video_ :: Array JSX -> JSX
-video_ children = video { children }
+_video'
+  :: ReactComponent (Record Props_video)
+_video' = unsafePerformEffect (unsafeCreateDOMComponent "video")
 
 type Props_wbr =
   ( _aria :: Object String
@@ -17740,4 +18206,8 @@ wbr'
   :: forall attrs attrs_
    . Union attrs attrs_ Props_wbr
   => ReactComponent (Record attrs)
-wbr' = unsafeCreateDOMComponent "wbr"
+wbr' = unsafeCoerce _wbr'
+
+_wbr'
+  :: ReactComponent (Record Props_wbr)
+_wbr' = unsafePerformEffect (unsafeCreateDOMComponent "wbr")

@@ -23,7 +23,11 @@ exports.unsafeCreateDOMComponent_ = (createElement) => (el) => {
     }
     return Object.assign({ ref }, props, data, aria);
   };
-  return React.forwardRef((props, ref) =>
-    createElement(el)(flattenDataProp(props, ref))
-  );
+  return () => {
+    const c = React.forwardRef((props, ref) =>
+      createElement(el)(flattenDataProp(props, ref))
+    );
+    c.displayName = el;
+    return c;
+  };
 };

@@ -5,11 +5,13 @@
 module React.Basic.DOM.SVG where
 
 import Data.Nullable (Nullable)
+import Effect.Unsafe (unsafePerformEffect)
 import Foreign.Object (Object)
 import Prim.Row (class Union)
-import Web.DOM (Node)
 import React.Basic (JSX, ReactComponent, Ref, element)
 import React.Basic.DOM.Internal (SharedSVGProps, unsafeCreateDOMComponent)
+import Unsafe.Coerce (unsafeCoerce)
+import Web.DOM (Node)
 
 type Props_a =
   ( _aria :: Object String
@@ -111,14 +113,18 @@ a
   -> JSX
 a = element a'
 
+a_ :: Array JSX -> JSX
+a_ children = a { children }
+
 a'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_a)
   => ReactComponent (Record attrs)
-a' = unsafeCreateDOMComponent "a"
+a' = unsafeCoerce _a'
 
-a_ :: Array JSX -> JSX
-a_ children = a { children }
+_a'
+  :: ReactComponent (Record (SharedSVGProps Props_a))
+_a' = unsafePerformEffect (unsafeCreateDOMComponent "a")
 
 type Props_animate =
   ( _aria :: Object String
@@ -220,14 +226,18 @@ animate
   -> JSX
 animate = element animate'
 
+animate_ :: Array JSX -> JSX
+animate_ children = animate { children }
+
 animate'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_animate)
   => ReactComponent (Record attrs)
-animate' = unsafeCreateDOMComponent "animate"
+animate' = unsafeCoerce _animate'
 
-animate_ :: Array JSX -> JSX
-animate_ children = animate { children }
+_animate'
+  :: ReactComponent (Record (SharedSVGProps Props_animate))
+_animate' = unsafePerformEffect (unsafeCreateDOMComponent "animate")
 
 type Props_animateColor =
   ( _aria :: Object String
@@ -328,14 +338,18 @@ animateColor
   -> JSX
 animateColor = element animateColor'
 
+animateColor_ :: Array JSX -> JSX
+animateColor_ children = animateColor { children }
+
 animateColor'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_animateColor)
   => ReactComponent (Record attrs)
-animateColor' = unsafeCreateDOMComponent "animateColor"
+animateColor' = unsafeCoerce _animateColor'
 
-animateColor_ :: Array JSX -> JSX
-animateColor_ children = animateColor { children }
+_animateColor'
+  :: ReactComponent (Record (SharedSVGProps Props_animateColor))
+_animateColor' = unsafePerformEffect (unsafeCreateDOMComponent "animateColor")
 
 type Props_animateMotion =
   ( _aria :: Object String
@@ -381,14 +395,18 @@ animateMotion
   -> JSX
 animateMotion = element animateMotion'
 
+animateMotion_ :: Array JSX -> JSX
+animateMotion_ children = animateMotion { children }
+
 animateMotion'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_animateMotion)
   => ReactComponent (Record attrs)
-animateMotion' = unsafeCreateDOMComponent "animateMotion"
+animateMotion' = unsafeCoerce _animateMotion'
 
-animateMotion_ :: Array JSX -> JSX
-animateMotion_ children = animateMotion { children }
+_animateMotion'
+  :: ReactComponent (Record (SharedSVGProps Props_animateMotion))
+_animateMotion' = unsafePerformEffect (unsafeCreateDOMComponent "animateMotion")
 
 type Props_animateTransform =
   ( _aria :: Object String
@@ -433,14 +451,18 @@ animateTransform
   -> JSX
 animateTransform = element animateTransform'
 
+animateTransform_ :: Array JSX -> JSX
+animateTransform_ children = animateTransform { children }
+
 animateTransform'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_animateTransform)
   => ReactComponent (Record attrs)
-animateTransform' = unsafeCreateDOMComponent "animateTransform"
+animateTransform' = unsafeCoerce _animateTransform'
 
-animateTransform_ :: Array JSX -> JSX
-animateTransform_ children = animateTransform { children }
+_animateTransform'
+  :: ReactComponent (Record (SharedSVGProps Props_animateTransform))
+_animateTransform' = unsafePerformEffect (unsafeCreateDOMComponent "animateTransform")
 
 type Props_animation =
   ( _aria :: Object String
@@ -494,14 +516,18 @@ animation
   -> JSX
 animation = element animation'
 
+animation_ :: Array JSX -> JSX
+animation_ children = animation { children }
+
 animation'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_animation)
   => ReactComponent (Record attrs)
-animation' = unsafeCreateDOMComponent "animation"
+animation' = unsafeCoerce _animation'
 
-animation_ :: Array JSX -> JSX
-animation_ children = animation { children }
+_animation'
+  :: ReactComponent (Record (SharedSVGProps Props_animation))
+_animation' = unsafePerformEffect (unsafeCreateDOMComponent "animation")
 
 type Props_audio =
   ( _aria :: Object String
@@ -537,14 +563,18 @@ audio
   -> JSX
 audio = element audio'
 
+audio_ :: Array JSX -> JSX
+audio_ children = audio { children }
+
 audio'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_audio)
   => ReactComponent (Record attrs)
-audio' = unsafeCreateDOMComponent "audio"
+audio' = unsafeCoerce _audio'
 
-audio_ :: Array JSX -> JSX
-audio_ children = audio { children }
+_audio'
+  :: ReactComponent (Record (SharedSVGProps Props_audio))
+_audio' = unsafePerformEffect (unsafeCreateDOMComponent "audio")
 
 type Props_canvas =
   ( _aria :: Object String
@@ -564,14 +594,18 @@ canvas
   -> JSX
 canvas = element canvas'
 
+canvas_ :: Array JSX -> JSX
+canvas_ children = canvas { children }
+
 canvas'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_canvas)
   => ReactComponent (Record attrs)
-canvas' = unsafeCreateDOMComponent "canvas"
+canvas' = unsafeCoerce _canvas'
 
-canvas_ :: Array JSX -> JSX
-canvas_ children = canvas { children }
+_canvas'
+  :: ReactComponent (Record (SharedSVGProps Props_canvas))
+_canvas' = unsafePerformEffect (unsafeCreateDOMComponent "canvas")
 
 type Props_circle =
   ( _aria :: Object String
@@ -670,14 +704,18 @@ circle
   -> JSX
 circle = element circle'
 
+circle_ :: Array JSX -> JSX
+circle_ children = circle { children }
+
 circle'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_circle)
   => ReactComponent (Record attrs)
-circle' = unsafeCreateDOMComponent "circle"
+circle' = unsafeCoerce _circle'
 
-circle_ :: Array JSX -> JSX
-circle_ children = circle { children }
+_circle'
+  :: ReactComponent (Record (SharedSVGProps Props_circle))
+_circle' = unsafePerformEffect (unsafeCreateDOMComponent "circle")
 
 type Props_clipPath =
   ( _aria :: Object String
@@ -759,14 +797,18 @@ clipPath
   -> JSX
 clipPath = element clipPath'
 
+clipPath_ :: Array JSX -> JSX
+clipPath_ children = clipPath { children }
+
 clipPath'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_clipPath)
   => ReactComponent (Record attrs)
-clipPath' = unsafeCreateDOMComponent "clipPath"
+clipPath' = unsafeCoerce _clipPath'
 
-clipPath_ :: Array JSX -> JSX
-clipPath_ children = clipPath { children }
+_clipPath'
+  :: ReactComponent (Record (SharedSVGProps Props_clipPath))
+_clipPath' = unsafePerformEffect (unsafeCreateDOMComponent "clipPath")
 
 type Props_defs =
   ( _aria :: Object String
@@ -847,14 +889,18 @@ defs
   -> JSX
 defs = element defs'
 
+defs_ :: Array JSX -> JSX
+defs_ children = defs { children }
+
 defs'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_defs)
   => ReactComponent (Record attrs)
-defs' = unsafeCreateDOMComponent "defs"
+defs' = unsafeCoerce _defs'
 
-defs_ :: Array JSX -> JSX
-defs_ children = defs { children }
+_defs'
+  :: ReactComponent (Record (SharedSVGProps Props_defs))
+_defs' = unsafePerformEffect (unsafeCreateDOMComponent "defs")
 
 type Props_desc =
   ( _aria :: Object String
@@ -876,14 +922,18 @@ desc
   -> JSX
 desc = element desc'
 
+desc_ :: Array JSX -> JSX
+desc_ children = desc { children }
+
 desc'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_desc)
   => ReactComponent (Record attrs)
-desc' = unsafeCreateDOMComponent "desc"
+desc' = unsafeCoerce _desc'
 
-desc_ :: Array JSX -> JSX
-desc_ children = desc { children }
+_desc'
+  :: ReactComponent (Record (SharedSVGProps Props_desc))
+_desc' = unsafePerformEffect (unsafeCreateDOMComponent "desc")
 
 type Props_discard =
   ( _aria :: Object String
@@ -907,14 +957,18 @@ discard
   -> JSX
 discard = element discard'
 
+discard_ :: Array JSX -> JSX
+discard_ children = discard { children }
+
 discard'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_discard)
   => ReactComponent (Record attrs)
-discard' = unsafeCreateDOMComponent "discard"
+discard' = unsafeCoerce _discard'
 
-discard_ :: Array JSX -> JSX
-discard_ children = discard { children }
+_discard'
+  :: ReactComponent (Record (SharedSVGProps Props_discard))
+_discard' = unsafePerformEffect (unsafeCreateDOMComponent "discard")
 
 type Props_ellipse =
   ( _aria :: Object String
@@ -1014,14 +1068,18 @@ ellipse
   -> JSX
 ellipse = element ellipse'
 
+ellipse_ :: Array JSX -> JSX
+ellipse_ children = ellipse { children }
+
 ellipse'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_ellipse)
   => ReactComponent (Record attrs)
-ellipse' = unsafeCreateDOMComponent "ellipse"
+ellipse' = unsafeCoerce _ellipse'
 
-ellipse_ :: Array JSX -> JSX
-ellipse_ children = ellipse { children }
+_ellipse'
+  :: ReactComponent (Record (SharedSVGProps Props_ellipse))
+_ellipse' = unsafePerformEffect (unsafeCreateDOMComponent "ellipse")
 
 type Props_feBlend =
   ( _aria :: Object String
@@ -1105,14 +1163,18 @@ feBlend
   -> JSX
 feBlend = element feBlend'
 
+feBlend_ :: Array JSX -> JSX
+feBlend_ children = feBlend { children }
+
 feBlend'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feBlend)
   => ReactComponent (Record attrs)
-feBlend' = unsafeCreateDOMComponent "feBlend"
+feBlend' = unsafeCoerce _feBlend'
 
-feBlend_ :: Array JSX -> JSX
-feBlend_ children = feBlend { children }
+_feBlend'
+  :: ReactComponent (Record (SharedSVGProps Props_feBlend))
+_feBlend' = unsafePerformEffect (unsafeCreateDOMComponent "feBlend")
 
 type Props_feColorMatrix =
   ( _aria :: Object String
@@ -1196,14 +1258,18 @@ feColorMatrix
   -> JSX
 feColorMatrix = element feColorMatrix'
 
+feColorMatrix_ :: Array JSX -> JSX
+feColorMatrix_ children = feColorMatrix { children }
+
 feColorMatrix'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feColorMatrix)
   => ReactComponent (Record attrs)
-feColorMatrix' = unsafeCreateDOMComponent "feColorMatrix"
+feColorMatrix' = unsafeCoerce _feColorMatrix'
 
-feColorMatrix_ :: Array JSX -> JSX
-feColorMatrix_ children = feColorMatrix { children }
+_feColorMatrix'
+  :: ReactComponent (Record (SharedSVGProps Props_feColorMatrix))
+_feColorMatrix' = unsafePerformEffect (unsafeCreateDOMComponent "feColorMatrix")
 
 type Props_feComponentTransfer =
   ( _aria :: Object String
@@ -1285,14 +1351,18 @@ feComponentTransfer
   -> JSX
 feComponentTransfer = element feComponentTransfer'
 
+feComponentTransfer_ :: Array JSX -> JSX
+feComponentTransfer_ children = feComponentTransfer { children }
+
 feComponentTransfer'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feComponentTransfer)
   => ReactComponent (Record attrs)
-feComponentTransfer' = unsafeCreateDOMComponent "feComponentTransfer"
+feComponentTransfer' = unsafeCoerce _feComponentTransfer'
 
-feComponentTransfer_ :: Array JSX -> JSX
-feComponentTransfer_ children = feComponentTransfer { children }
+_feComponentTransfer'
+  :: ReactComponent (Record (SharedSVGProps Props_feComponentTransfer))
+_feComponentTransfer' = unsafePerformEffect (unsafeCreateDOMComponent "feComponentTransfer")
 
 type Props_feComposite =
   ( _aria :: Object String
@@ -1380,14 +1450,18 @@ feComposite
   -> JSX
 feComposite = element feComposite'
 
+feComposite_ :: Array JSX -> JSX
+feComposite_ children = feComposite { children }
+
 feComposite'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feComposite)
   => ReactComponent (Record attrs)
-feComposite' = unsafeCreateDOMComponent "feComposite"
+feComposite' = unsafeCoerce _feComposite'
 
-feComposite_ :: Array JSX -> JSX
-feComposite_ children = feComposite { children }
+_feComposite'
+  :: ReactComponent (Record (SharedSVGProps Props_feComposite))
+_feComposite' = unsafePerformEffect (unsafeCreateDOMComponent "feComposite")
 
 type Props_feConvolveMatrix =
   ( _aria :: Object String
@@ -1478,14 +1552,18 @@ feConvolveMatrix
   -> JSX
 feConvolveMatrix = element feConvolveMatrix'
 
+feConvolveMatrix_ :: Array JSX -> JSX
+feConvolveMatrix_ children = feConvolveMatrix { children }
+
 feConvolveMatrix'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feConvolveMatrix)
   => ReactComponent (Record attrs)
-feConvolveMatrix' = unsafeCreateDOMComponent "feConvolveMatrix"
+feConvolveMatrix' = unsafeCoerce _feConvolveMatrix'
 
-feConvolveMatrix_ :: Array JSX -> JSX
-feConvolveMatrix_ children = feConvolveMatrix { children }
+_feConvolveMatrix'
+  :: ReactComponent (Record (SharedSVGProps Props_feConvolveMatrix))
+_feConvolveMatrix' = unsafePerformEffect (unsafeCreateDOMComponent "feConvolveMatrix")
 
 type Props_feDiffuseLighting =
   ( _aria :: Object String
@@ -1570,14 +1648,18 @@ feDiffuseLighting
   -> JSX
 feDiffuseLighting = element feDiffuseLighting'
 
+feDiffuseLighting_ :: Array JSX -> JSX
+feDiffuseLighting_ children = feDiffuseLighting { children }
+
 feDiffuseLighting'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feDiffuseLighting)
   => ReactComponent (Record attrs)
-feDiffuseLighting' = unsafeCreateDOMComponent "feDiffuseLighting"
+feDiffuseLighting' = unsafeCoerce _feDiffuseLighting'
 
-feDiffuseLighting_ :: Array JSX -> JSX
-feDiffuseLighting_ children = feDiffuseLighting { children }
+_feDiffuseLighting'
+  :: ReactComponent (Record (SharedSVGProps Props_feDiffuseLighting))
+_feDiffuseLighting' = unsafePerformEffect (unsafeCreateDOMComponent "feDiffuseLighting")
 
 type Props_feDisplacementMap =
   ( _aria :: Object String
@@ -1663,14 +1745,18 @@ feDisplacementMap
   -> JSX
 feDisplacementMap = element feDisplacementMap'
 
+feDisplacementMap_ :: Array JSX -> JSX
+feDisplacementMap_ children = feDisplacementMap { children }
+
 feDisplacementMap'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feDisplacementMap)
   => ReactComponent (Record attrs)
-feDisplacementMap' = unsafeCreateDOMComponent "feDisplacementMap"
+feDisplacementMap' = unsafeCoerce _feDisplacementMap'
 
-feDisplacementMap_ :: Array JSX -> JSX
-feDisplacementMap_ children = feDisplacementMap { children }
+_feDisplacementMap'
+  :: ReactComponent (Record (SharedSVGProps Props_feDisplacementMap))
+_feDisplacementMap' = unsafePerformEffect (unsafeCreateDOMComponent "feDisplacementMap")
 
 type Props_feDistantLight =
   ( _aria :: Object String
@@ -1689,14 +1775,18 @@ feDistantLight
   -> JSX
 feDistantLight = element feDistantLight'
 
+feDistantLight_ :: Array JSX -> JSX
+feDistantLight_ children = feDistantLight { children }
+
 feDistantLight'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feDistantLight)
   => ReactComponent (Record attrs)
-feDistantLight' = unsafeCreateDOMComponent "feDistantLight"
+feDistantLight' = unsafeCoerce _feDistantLight'
 
-feDistantLight_ :: Array JSX -> JSX
-feDistantLight_ children = feDistantLight { children }
+_feDistantLight'
+  :: ReactComponent (Record (SharedSVGProps Props_feDistantLight))
+_feDistantLight' = unsafePerformEffect (unsafeCreateDOMComponent "feDistantLight")
 
 type Props_feDropShadow =
   ( _aria :: Object String
@@ -1722,14 +1812,18 @@ feDropShadow
   -> JSX
 feDropShadow = element feDropShadow'
 
+feDropShadow_ :: Array JSX -> JSX
+feDropShadow_ children = feDropShadow { children }
+
 feDropShadow'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feDropShadow)
   => ReactComponent (Record attrs)
-feDropShadow' = unsafeCreateDOMComponent "feDropShadow"
+feDropShadow' = unsafeCoerce _feDropShadow'
 
-feDropShadow_ :: Array JSX -> JSX
-feDropShadow_ children = feDropShadow { children }
+_feDropShadow'
+  :: ReactComponent (Record (SharedSVGProps Props_feDropShadow))
+_feDropShadow' = unsafePerformEffect (unsafeCreateDOMComponent "feDropShadow")
 
 type Props_feFlood =
   ( _aria :: Object String
@@ -1810,14 +1904,18 @@ feFlood
   -> JSX
 feFlood = element feFlood'
 
+feFlood_ :: Array JSX -> JSX
+feFlood_ children = feFlood { children }
+
 feFlood'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feFlood)
   => ReactComponent (Record attrs)
-feFlood' = unsafeCreateDOMComponent "feFlood"
+feFlood' = unsafeCoerce _feFlood'
 
-feFlood_ :: Array JSX -> JSX
-feFlood_ children = feFlood { children }
+_feFlood'
+  :: ReactComponent (Record (SharedSVGProps Props_feFlood))
+_feFlood' = unsafePerformEffect (unsafeCreateDOMComponent "feFlood")
 
 type Props_feFuncA =
   ( _aria :: Object String
@@ -1841,14 +1939,18 @@ feFuncA
   -> JSX
 feFuncA = element feFuncA'
 
+feFuncA_ :: Array JSX -> JSX
+feFuncA_ children = feFuncA { children }
+
 feFuncA'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feFuncA)
   => ReactComponent (Record attrs)
-feFuncA' = unsafeCreateDOMComponent "feFuncA"
+feFuncA' = unsafeCoerce _feFuncA'
 
-feFuncA_ :: Array JSX -> JSX
-feFuncA_ children = feFuncA { children }
+_feFuncA'
+  :: ReactComponent (Record (SharedSVGProps Props_feFuncA))
+_feFuncA' = unsafePerformEffect (unsafeCreateDOMComponent "feFuncA")
 
 type Props_feFuncB =
   ( _aria :: Object String
@@ -1872,14 +1974,18 @@ feFuncB
   -> JSX
 feFuncB = element feFuncB'
 
+feFuncB_ :: Array JSX -> JSX
+feFuncB_ children = feFuncB { children }
+
 feFuncB'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feFuncB)
   => ReactComponent (Record attrs)
-feFuncB' = unsafeCreateDOMComponent "feFuncB"
+feFuncB' = unsafeCoerce _feFuncB'
 
-feFuncB_ :: Array JSX -> JSX
-feFuncB_ children = feFuncB { children }
+_feFuncB'
+  :: ReactComponent (Record (SharedSVGProps Props_feFuncB))
+_feFuncB' = unsafePerformEffect (unsafeCreateDOMComponent "feFuncB")
 
 type Props_feFuncG =
   ( _aria :: Object String
@@ -1903,14 +2009,18 @@ feFuncG
   -> JSX
 feFuncG = element feFuncG'
 
+feFuncG_ :: Array JSX -> JSX
+feFuncG_ children = feFuncG { children }
+
 feFuncG'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feFuncG)
   => ReactComponent (Record attrs)
-feFuncG' = unsafeCreateDOMComponent "feFuncG"
+feFuncG' = unsafeCoerce _feFuncG'
 
-feFuncG_ :: Array JSX -> JSX
-feFuncG_ children = feFuncG { children }
+_feFuncG'
+  :: ReactComponent (Record (SharedSVGProps Props_feFuncG))
+_feFuncG' = unsafePerformEffect (unsafeCreateDOMComponent "feFuncG")
 
 type Props_feFuncR =
   ( _aria :: Object String
@@ -1934,14 +2044,18 @@ feFuncR
   -> JSX
 feFuncR = element feFuncR'
 
+feFuncR_ :: Array JSX -> JSX
+feFuncR_ children = feFuncR { children }
+
 feFuncR'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feFuncR)
   => ReactComponent (Record attrs)
-feFuncR' = unsafeCreateDOMComponent "feFuncR"
+feFuncR' = unsafeCoerce _feFuncR'
 
-feFuncR_ :: Array JSX -> JSX
-feFuncR_ children = feFuncR { children }
+_feFuncR'
+  :: ReactComponent (Record (SharedSVGProps Props_feFuncR))
+_feFuncR' = unsafePerformEffect (unsafeCreateDOMComponent "feFuncR")
 
 type Props_feGaussianBlur =
   ( _aria :: Object String
@@ -2025,14 +2139,18 @@ feGaussianBlur
   -> JSX
 feGaussianBlur = element feGaussianBlur'
 
+feGaussianBlur_ :: Array JSX -> JSX
+feGaussianBlur_ children = feGaussianBlur { children }
+
 feGaussianBlur'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feGaussianBlur)
   => ReactComponent (Record attrs)
-feGaussianBlur' = unsafeCreateDOMComponent "feGaussianBlur"
+feGaussianBlur' = unsafeCoerce _feGaussianBlur'
 
-feGaussianBlur_ :: Array JSX -> JSX
-feGaussianBlur_ children = feGaussianBlur { children }
+_feGaussianBlur'
+  :: ReactComponent (Record (SharedSVGProps Props_feGaussianBlur))
+_feGaussianBlur' = unsafePerformEffect (unsafeCreateDOMComponent "feGaussianBlur")
 
 type Props_feImage =
   ( _aria :: Object String
@@ -2117,14 +2235,18 @@ feImage
   -> JSX
 feImage = element feImage'
 
+feImage_ :: Array JSX -> JSX
+feImage_ children = feImage { children }
+
 feImage'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feImage)
   => ReactComponent (Record attrs)
-feImage' = unsafeCreateDOMComponent "feImage"
+feImage' = unsafeCoerce _feImage'
 
-feImage_ :: Array JSX -> JSX
-feImage_ children = feImage { children }
+_feImage'
+  :: ReactComponent (Record (SharedSVGProps Props_feImage))
+_feImage' = unsafePerformEffect (unsafeCreateDOMComponent "feImage")
 
 type Props_feMerge =
   ( _aria :: Object String
@@ -2205,14 +2327,18 @@ feMerge
   -> JSX
 feMerge = element feMerge'
 
+feMerge_ :: Array JSX -> JSX
+feMerge_ children = feMerge { children }
+
 feMerge'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feMerge)
   => ReactComponent (Record attrs)
-feMerge' = unsafeCreateDOMComponent "feMerge"
+feMerge' = unsafeCoerce _feMerge'
 
-feMerge_ :: Array JSX -> JSX
-feMerge_ children = feMerge { children }
+_feMerge'
+  :: ReactComponent (Record (SharedSVGProps Props_feMerge))
+_feMerge' = unsafePerformEffect (unsafeCreateDOMComponent "feMerge")
 
 type Props_feMergeNode =
   ( _aria :: Object String
@@ -2230,14 +2356,18 @@ feMergeNode
   -> JSX
 feMergeNode = element feMergeNode'
 
+feMergeNode_ :: Array JSX -> JSX
+feMergeNode_ children = feMergeNode { children }
+
 feMergeNode'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feMergeNode)
   => ReactComponent (Record attrs)
-feMergeNode' = unsafeCreateDOMComponent "feMergeNode"
+feMergeNode' = unsafeCoerce _feMergeNode'
 
-feMergeNode_ :: Array JSX -> JSX
-feMergeNode_ children = feMergeNode { children }
+_feMergeNode'
+  :: ReactComponent (Record (SharedSVGProps Props_feMergeNode))
+_feMergeNode' = unsafePerformEffect (unsafeCreateDOMComponent "feMergeNode")
 
 type Props_feMorphology =
   ( _aria :: Object String
@@ -2321,14 +2451,18 @@ feMorphology
   -> JSX
 feMorphology = element feMorphology'
 
+feMorphology_ :: Array JSX -> JSX
+feMorphology_ children = feMorphology { children }
+
 feMorphology'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feMorphology)
   => ReactComponent (Record attrs)
-feMorphology' = unsafeCreateDOMComponent "feMorphology"
+feMorphology' = unsafeCoerce _feMorphology'
 
-feMorphology_ :: Array JSX -> JSX
-feMorphology_ children = feMorphology { children }
+_feMorphology'
+  :: ReactComponent (Record (SharedSVGProps Props_feMorphology))
+_feMorphology' = unsafePerformEffect (unsafeCreateDOMComponent "feMorphology")
 
 type Props_feOffset =
   ( _aria :: Object String
@@ -2412,14 +2546,18 @@ feOffset
   -> JSX
 feOffset = element feOffset'
 
+feOffset_ :: Array JSX -> JSX
+feOffset_ children = feOffset { children }
+
 feOffset'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feOffset)
   => ReactComponent (Record attrs)
-feOffset' = unsafeCreateDOMComponent "feOffset"
+feOffset' = unsafeCoerce _feOffset'
 
-feOffset_ :: Array JSX -> JSX
-feOffset_ children = feOffset { children }
+_feOffset'
+  :: ReactComponent (Record (SharedSVGProps Props_feOffset))
+_feOffset' = unsafePerformEffect (unsafeCreateDOMComponent "feOffset")
 
 type Props_fePointLight =
   ( _aria :: Object String
@@ -2439,14 +2577,18 @@ fePointLight
   -> JSX
 fePointLight = element fePointLight'
 
+fePointLight_ :: Array JSX -> JSX
+fePointLight_ children = fePointLight { children }
+
 fePointLight'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_fePointLight)
   => ReactComponent (Record attrs)
-fePointLight' = unsafeCreateDOMComponent "fePointLight"
+fePointLight' = unsafeCoerce _fePointLight'
 
-fePointLight_ :: Array JSX -> JSX
-fePointLight_ children = fePointLight { children }
+_fePointLight'
+  :: ReactComponent (Record (SharedSVGProps Props_fePointLight))
+_fePointLight' = unsafePerformEffect (unsafeCreateDOMComponent "fePointLight")
 
 type Props_feSpecularLighting =
   ( _aria :: Object String
@@ -2532,14 +2674,18 @@ feSpecularLighting
   -> JSX
 feSpecularLighting = element feSpecularLighting'
 
+feSpecularLighting_ :: Array JSX -> JSX
+feSpecularLighting_ children = feSpecularLighting { children }
+
 feSpecularLighting'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feSpecularLighting)
   => ReactComponent (Record attrs)
-feSpecularLighting' = unsafeCreateDOMComponent "feSpecularLighting"
+feSpecularLighting' = unsafeCoerce _feSpecularLighting'
 
-feSpecularLighting_ :: Array JSX -> JSX
-feSpecularLighting_ children = feSpecularLighting { children }
+_feSpecularLighting'
+  :: ReactComponent (Record (SharedSVGProps Props_feSpecularLighting))
+_feSpecularLighting' = unsafePerformEffect (unsafeCreateDOMComponent "feSpecularLighting")
 
 type Props_feSpotLight =
   ( _aria :: Object String
@@ -2564,14 +2710,18 @@ feSpotLight
   -> JSX
 feSpotLight = element feSpotLight'
 
+feSpotLight_ :: Array JSX -> JSX
+feSpotLight_ children = feSpotLight { children }
+
 feSpotLight'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feSpotLight)
   => ReactComponent (Record attrs)
-feSpotLight' = unsafeCreateDOMComponent "feSpotLight"
+feSpotLight' = unsafeCoerce _feSpotLight'
 
-feSpotLight_ :: Array JSX -> JSX
-feSpotLight_ children = feSpotLight { children }
+_feSpotLight'
+  :: ReactComponent (Record (SharedSVGProps Props_feSpotLight))
+_feSpotLight' = unsafePerformEffect (unsafeCreateDOMComponent "feSpotLight")
 
 type Props_feTile =
   ( _aria :: Object String
@@ -2653,14 +2803,18 @@ feTile
   -> JSX
 feTile = element feTile'
 
+feTile_ :: Array JSX -> JSX
+feTile_ children = feTile { children }
+
 feTile'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feTile)
   => ReactComponent (Record attrs)
-feTile' = unsafeCreateDOMComponent "feTile"
+feTile' = unsafeCoerce _feTile'
 
-feTile_ :: Array JSX -> JSX
-feTile_ children = feTile { children }
+_feTile'
+  :: ReactComponent (Record (SharedSVGProps Props_feTile))
+_feTile' = unsafePerformEffect (unsafeCreateDOMComponent "feTile")
 
 type Props_feTurbulence =
   ( _aria :: Object String
@@ -2746,14 +2900,18 @@ feTurbulence
   -> JSX
 feTurbulence = element feTurbulence'
 
+feTurbulence_ :: Array JSX -> JSX
+feTurbulence_ children = feTurbulence { children }
+
 feTurbulence'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_feTurbulence)
   => ReactComponent (Record attrs)
-feTurbulence' = unsafeCreateDOMComponent "feTurbulence"
+feTurbulence' = unsafeCoerce _feTurbulence'
 
-feTurbulence_ :: Array JSX -> JSX
-feTurbulence_ children = feTurbulence { children }
+_feTurbulence'
+  :: ReactComponent (Record (SharedSVGProps Props_feTurbulence))
+_feTurbulence' = unsafePerformEffect (unsafeCreateDOMComponent "feTurbulence")
 
 type Props_filter =
   ( _aria :: Object String
@@ -2837,14 +2995,18 @@ filter
   -> JSX
 filter = element filter'
 
+filter_ :: Array JSX -> JSX
+filter_ children = filter { children }
+
 filter'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_filter)
   => ReactComponent (Record attrs)
-filter' = unsafeCreateDOMComponent "filter"
+filter' = unsafeCoerce _filter'
 
-filter_ :: Array JSX -> JSX
-filter_ children = filter { children }
+_filter'
+  :: ReactComponent (Record (SharedSVGProps Props_filter))
+_filter' = unsafePerformEffect (unsafeCreateDOMComponent "filter")
 
 type Props_foreignObject =
   ( _aria :: Object String
@@ -2943,14 +3105,18 @@ foreignObject
   -> JSX
 foreignObject = element foreignObject'
 
+foreignObject_ :: Array JSX -> JSX
+foreignObject_ children = foreignObject { children }
+
 foreignObject'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_foreignObject)
   => ReactComponent (Record attrs)
-foreignObject' = unsafeCreateDOMComponent "foreignObject"
+foreignObject' = unsafeCoerce _foreignObject'
 
-foreignObject_ :: Array JSX -> JSX
-foreignObject_ children = foreignObject { children }
+_foreignObject'
+  :: ReactComponent (Record (SharedSVGProps Props_foreignObject))
+_foreignObject' = unsafePerformEffect (unsafeCreateDOMComponent "foreignObject")
 
 type Props_g =
   ( _aria :: Object String
@@ -3045,14 +3211,18 @@ g
   -> JSX
 g = element g'
 
+g_ :: Array JSX -> JSX
+g_ children = g { children }
+
 g'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_g)
   => ReactComponent (Record attrs)
-g' = unsafeCreateDOMComponent "g"
+g' = unsafeCoerce _g'
 
-g_ :: Array JSX -> JSX
-g_ children = g { children }
+_g'
+  :: ReactComponent (Record (SharedSVGProps Props_g))
+_g' = unsafePerformEffect (unsafeCreateDOMComponent "g")
 
 type Props_handler =
   ( _aria :: Object String
@@ -3071,14 +3241,18 @@ handler
   -> JSX
 handler = element handler'
 
+handler_ :: Array JSX -> JSX
+handler_ children = handler { children }
+
 handler'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_handler)
   => ReactComponent (Record attrs)
-handler' = unsafeCreateDOMComponent "handler"
+handler' = unsafeCoerce _handler'
 
-handler_ :: Array JSX -> JSX
-handler_ children = handler { children }
+_handler'
+  :: ReactComponent (Record (SharedSVGProps Props_handler))
+_handler' = unsafePerformEffect (unsafeCreateDOMComponent "handler")
 
 type Props_iframe =
   ( _aria :: Object String
@@ -3097,14 +3271,18 @@ iframe
   -> JSX
 iframe = element iframe'
 
+iframe_ :: Array JSX -> JSX
+iframe_ children = iframe { children }
+
 iframe'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_iframe)
   => ReactComponent (Record attrs)
-iframe' = unsafeCreateDOMComponent "iframe"
+iframe' = unsafeCoerce _iframe'
 
-iframe_ :: Array JSX -> JSX
-iframe_ children = iframe { children }
+_iframe'
+  :: ReactComponent (Record (SharedSVGProps Props_iframe))
+_iframe' = unsafePerformEffect (unsafeCreateDOMComponent "iframe")
 
 type Props_image =
   ( _aria :: Object String
@@ -3207,14 +3385,18 @@ image
   -> JSX
 image = element image'
 
+image_ :: Array JSX -> JSX
+image_ children = image { children }
+
 image'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_image)
   => ReactComponent (Record attrs)
-image' = unsafeCreateDOMComponent "image"
+image' = unsafeCoerce _image'
 
-image_ :: Array JSX -> JSX
-image_ children = image { children }
+_image'
+  :: ReactComponent (Record (SharedSVGProps Props_image))
+_image' = unsafePerformEffect (unsafeCreateDOMComponent "image")
 
 type Props_line =
   ( _aria :: Object String
@@ -3314,14 +3496,18 @@ line
   -> JSX
 line = element line'
 
+line_ :: Array JSX -> JSX
+line_ children = line { children }
+
 line'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_line)
   => ReactComponent (Record attrs)
-line' = unsafeCreateDOMComponent "line"
+line' = unsafeCoerce _line'
 
-line_ :: Array JSX -> JSX
-line_ children = line { children }
+_line'
+  :: ReactComponent (Record (SharedSVGProps Props_line))
+_line' = unsafePerformEffect (unsafeCreateDOMComponent "line")
 
 type Props_linearGradient =
   ( _aria :: Object String
@@ -3406,14 +3592,18 @@ linearGradient
   -> JSX
 linearGradient = element linearGradient'
 
+linearGradient_ :: Array JSX -> JSX
+linearGradient_ children = linearGradient { children }
+
 linearGradient'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_linearGradient)
   => ReactComponent (Record attrs)
-linearGradient' = unsafeCreateDOMComponent "linearGradient"
+linearGradient' = unsafeCoerce _linearGradient'
 
-linearGradient_ :: Array JSX -> JSX
-linearGradient_ children = linearGradient { children }
+_linearGradient'
+  :: ReactComponent (Record (SharedSVGProps Props_linearGradient))
+_linearGradient' = unsafePerformEffect (unsafeCreateDOMComponent "linearGradient")
 
 type Props_listener =
   ( _aria :: Object String
@@ -3437,14 +3627,18 @@ listener
   -> JSX
 listener = element listener'
 
+listener_ :: Array JSX -> JSX
+listener_ children = listener { children }
+
 listener'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_listener)
   => ReactComponent (Record attrs)
-listener' = unsafeCreateDOMComponent "listener"
+listener' = unsafeCoerce _listener'
 
-listener_ :: Array JSX -> JSX
-listener_ children = listener { children }
+_listener'
+  :: ReactComponent (Record (SharedSVGProps Props_listener))
+_listener' = unsafePerformEffect (unsafeCreateDOMComponent "listener")
 
 type Props_marker =
   ( _aria :: Object String
@@ -3529,14 +3723,18 @@ marker
   -> JSX
 marker = element marker'
 
+marker_ :: Array JSX -> JSX
+marker_ children = marker { children }
+
 marker'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_marker)
   => ReactComponent (Record attrs)
-marker' = unsafeCreateDOMComponent "marker"
+marker' = unsafeCoerce _marker'
 
-marker_ :: Array JSX -> JSX
-marker_ children = marker { children }
+_marker'
+  :: ReactComponent (Record (SharedSVGProps Props_marker))
+_marker' = unsafePerformEffect (unsafeCreateDOMComponent "marker")
 
 type Props_mask =
   ( _aria :: Object String
@@ -3622,14 +3820,18 @@ mask
   -> JSX
 mask = element mask'
 
+mask_ :: Array JSX -> JSX
+mask_ children = mask { children }
+
 mask'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_mask)
   => ReactComponent (Record attrs)
-mask' = unsafeCreateDOMComponent "mask"
+mask' = unsafeCoerce _mask'
 
-mask_ :: Array JSX -> JSX
-mask_ children = mask { children }
+_mask'
+  :: ReactComponent (Record (SharedSVGProps Props_mask))
+_mask' = unsafePerformEffect (unsafeCreateDOMComponent "mask")
 
 type Props_metadata =
   ( _aria :: Object String
@@ -3651,14 +3853,18 @@ metadata
   -> JSX
 metadata = element metadata'
 
+metadata_ :: Array JSX -> JSX
+metadata_ children = metadata { children }
+
 metadata'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_metadata)
   => ReactComponent (Record attrs)
-metadata' = unsafeCreateDOMComponent "metadata"
+metadata' = unsafeCoerce _metadata'
 
-metadata_ :: Array JSX -> JSX
-metadata_ children = metadata { children }
+_metadata'
+  :: ReactComponent (Record (SharedSVGProps Props_metadata))
+_metadata' = unsafePerformEffect (unsafeCreateDOMComponent "metadata")
 
 type Props_mpath =
   ( _aria :: Object String
@@ -3677,14 +3883,18 @@ mpath
   -> JSX
 mpath = element mpath'
 
+mpath_ :: Array JSX -> JSX
+mpath_ children = mpath { children }
+
 mpath'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_mpath)
   => ReactComponent (Record attrs)
-mpath' = unsafeCreateDOMComponent "mpath"
+mpath' = unsafeCoerce _mpath'
 
-mpath_ :: Array JSX -> JSX
-mpath_ children = mpath { children }
+_mpath'
+  :: ReactComponent (Record (SharedSVGProps Props_mpath))
+_mpath' = unsafePerformEffect (unsafeCreateDOMComponent "mpath")
 
 type Props_path =
   ( _aria :: Object String
@@ -3781,14 +3991,18 @@ path
   -> JSX
 path = element path'
 
+path_ :: Array JSX -> JSX
+path_ children = path { children }
+
 path'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_path)
   => ReactComponent (Record attrs)
-path' = unsafeCreateDOMComponent "path"
+path' = unsafeCoerce _path'
 
-path_ :: Array JSX -> JSX
-path_ children = path { children }
+_path'
+  :: ReactComponent (Record (SharedSVGProps Props_path))
+_path' = unsafePerformEffect (unsafeCreateDOMComponent "path")
 
 type Props_pattern =
   ( _aria :: Object String
@@ -3878,14 +4092,18 @@ pattern
   -> JSX
 pattern = element pattern'
 
+pattern_ :: Array JSX -> JSX
+pattern_ children = pattern { children }
+
 pattern'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_pattern)
   => ReactComponent (Record attrs)
-pattern' = unsafeCreateDOMComponent "pattern"
+pattern' = unsafeCoerce _pattern'
 
-pattern_ :: Array JSX -> JSX
-pattern_ children = pattern { children }
+_pattern'
+  :: ReactComponent (Record (SharedSVGProps Props_pattern))
+_pattern' = unsafePerformEffect (unsafeCreateDOMComponent "pattern")
 
 type Props_polygon =
   ( _aria :: Object String
@@ -3982,14 +4200,18 @@ polygon
   -> JSX
 polygon = element polygon'
 
+polygon_ :: Array JSX -> JSX
+polygon_ children = polygon { children }
+
 polygon'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_polygon)
   => ReactComponent (Record attrs)
-polygon' = unsafeCreateDOMComponent "polygon"
+polygon' = unsafeCoerce _polygon'
 
-polygon_ :: Array JSX -> JSX
-polygon_ children = polygon { children }
+_polygon'
+  :: ReactComponent (Record (SharedSVGProps Props_polygon))
+_polygon' = unsafePerformEffect (unsafeCreateDOMComponent "polygon")
 
 type Props_polyline =
   ( _aria :: Object String
@@ -4086,14 +4308,18 @@ polyline
   -> JSX
 polyline = element polyline'
 
+polyline_ :: Array JSX -> JSX
+polyline_ children = polyline { children }
+
 polyline'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_polyline)
   => ReactComponent (Record attrs)
-polyline' = unsafeCreateDOMComponent "polyline"
+polyline' = unsafeCoerce _polyline'
 
-polyline_ :: Array JSX -> JSX
-polyline_ children = polyline { children }
+_polyline'
+  :: ReactComponent (Record (SharedSVGProps Props_polyline))
+_polyline' = unsafePerformEffect (unsafeCreateDOMComponent "polyline")
 
 type Props_prefetch =
   ( _aria :: Object String
@@ -4115,14 +4341,18 @@ prefetch
   -> JSX
 prefetch = element prefetch'
 
+prefetch_ :: Array JSX -> JSX
+prefetch_ children = prefetch { children }
+
 prefetch'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_prefetch)
   => ReactComponent (Record attrs)
-prefetch' = unsafeCreateDOMComponent "prefetch"
+prefetch' = unsafeCoerce _prefetch'
 
-prefetch_ :: Array JSX -> JSX
-prefetch_ children = prefetch { children }
+_prefetch'
+  :: ReactComponent (Record (SharedSVGProps Props_prefetch))
+_prefetch' = unsafePerformEffect (unsafeCreateDOMComponent "prefetch")
 
 type Props_radialGradient =
   ( _aria :: Object String
@@ -4209,14 +4439,18 @@ radialGradient
   -> JSX
 radialGradient = element radialGradient'
 
+radialGradient_ :: Array JSX -> JSX
+radialGradient_ children = radialGradient { children }
+
 radialGradient'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_radialGradient)
   => ReactComponent (Record attrs)
-radialGradient' = unsafeCreateDOMComponent "radialGradient"
+radialGradient' = unsafeCoerce _radialGradient'
 
-radialGradient_ :: Array JSX -> JSX
-radialGradient_ children = radialGradient { children }
+_radialGradient'
+  :: ReactComponent (Record (SharedSVGProps Props_radialGradient))
+_radialGradient' = unsafePerformEffect (unsafeCreateDOMComponent "radialGradient")
 
 type Props_rect =
   ( _aria :: Object String
@@ -4318,14 +4552,18 @@ rect
   -> JSX
 rect = element rect'
 
+rect_ :: Array JSX -> JSX
+rect_ children = rect { children }
+
 rect'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_rect)
   => ReactComponent (Record attrs)
-rect' = unsafeCreateDOMComponent "rect"
+rect' = unsafeCoerce _rect'
 
-rect_ :: Array JSX -> JSX
-rect_ children = rect { children }
+_rect'
+  :: ReactComponent (Record (SharedSVGProps Props_rect))
+_rect' = unsafePerformEffect (unsafeCreateDOMComponent "rect")
 
 type Props_script =
   ( _aria :: Object String
@@ -4346,14 +4584,18 @@ script
   -> JSX
 script = element script'
 
+script_ :: Array JSX -> JSX
+script_ children = script { children }
+
 script'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_script)
   => ReactComponent (Record attrs)
-script' = unsafeCreateDOMComponent "script"
+script' = unsafeCoerce _script'
 
-script_ :: Array JSX -> JSX
-script_ children = script { children }
+_script'
+  :: ReactComponent (Record (SharedSVGProps Props_script))
+_script' = unsafePerformEffect (unsafeCreateDOMComponent "script")
 
 type Props_set =
   ( _aria :: Object String
@@ -4389,14 +4631,18 @@ set
   -> JSX
 set = element set'
 
+set_ :: Array JSX -> JSX
+set_ children = set { children }
+
 set'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_set)
   => ReactComponent (Record attrs)
-set' = unsafeCreateDOMComponent "set"
+set' = unsafeCoerce _set'
 
-set_ :: Array JSX -> JSX
-set_ children = set { children }
+_set'
+  :: ReactComponent (Record (SharedSVGProps Props_set))
+_set' = unsafePerformEffect (unsafeCreateDOMComponent "set")
 
 type Props_stop =
   ( _aria :: Object String
@@ -4473,14 +4719,18 @@ stop
   -> JSX
 stop = element stop'
 
+stop_ :: Array JSX -> JSX
+stop_ children = stop { children }
+
 stop'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_stop)
   => ReactComponent (Record attrs)
-stop' = unsafeCreateDOMComponent "stop"
+stop' = unsafeCoerce _stop'
 
-stop_ :: Array JSX -> JSX
-stop_ children = stop { children }
+_stop'
+  :: ReactComponent (Record (SharedSVGProps Props_stop))
+_stop' = unsafePerformEffect (unsafeCreateDOMComponent "stop")
 
 type Props_style =
   ( _aria :: Object String
@@ -4500,14 +4750,18 @@ style
   -> JSX
 style = element style'
 
+style_ :: Array JSX -> JSX
+style_ children = style { children }
+
 style'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_style)
   => ReactComponent (Record attrs)
-style' = unsafeCreateDOMComponent "style"
+style' = unsafeCoerce _style'
 
-style_ :: Array JSX -> JSX
-style_ children = style { children }
+_style'
+  :: ReactComponent (Record (SharedSVGProps Props_style))
+_style' = unsafePerformEffect (unsafeCreateDOMComponent "style")
 
 type Props_svg =
   ( _aria :: Object String
@@ -4618,14 +4872,18 @@ svg
   -> JSX
 svg = element svg'
 
+svg_ :: Array JSX -> JSX
+svg_ children = svg { children }
+
 svg'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_svg)
   => ReactComponent (Record attrs)
-svg' = unsafeCreateDOMComponent "svg"
+svg' = unsafeCoerce _svg'
 
-svg_ :: Array JSX -> JSX
-svg_ children = svg { children }
+_svg'
+  :: ReactComponent (Record (SharedSVGProps Props_svg))
+_svg' = unsafePerformEffect (unsafeCreateDOMComponent "svg")
 
 type Props_switch =
   ( _aria :: Object String
@@ -4720,14 +4978,18 @@ switch
   -> JSX
 switch = element switch'
 
+switch_ :: Array JSX -> JSX
+switch_ children = switch { children }
+
 switch'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_switch)
   => ReactComponent (Record attrs)
-switch' = unsafeCreateDOMComponent "switch"
+switch' = unsafeCoerce _switch'
 
-switch_ :: Array JSX -> JSX
-switch_ children = switch { children }
+_switch'
+  :: ReactComponent (Record (SharedSVGProps Props_switch))
+_switch' = unsafePerformEffect (unsafeCreateDOMComponent "switch")
 
 type Props_symbol =
   ( _aria :: Object String
@@ -4808,14 +5070,18 @@ symbol
   -> JSX
 symbol = element symbol'
 
+symbol_ :: Array JSX -> JSX
+symbol_ children = symbol { children }
+
 symbol'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_symbol)
   => ReactComponent (Record attrs)
-symbol' = unsafeCreateDOMComponent "symbol"
+symbol' = unsafeCoerce _symbol'
 
-symbol_ :: Array JSX -> JSX
-symbol_ children = symbol { children }
+_symbol'
+  :: ReactComponent (Record (SharedSVGProps Props_symbol))
+_symbol' = unsafePerformEffect (unsafeCreateDOMComponent "symbol")
 
 type Props_tbreak =
   ( _aria :: Object String
@@ -4837,14 +5103,18 @@ tbreak
   -> JSX
 tbreak = element tbreak'
 
+tbreak_ :: Array JSX -> JSX
+tbreak_ children = tbreak { children }
+
 tbreak'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_tbreak)
   => ReactComponent (Record attrs)
-tbreak' = unsafeCreateDOMComponent "tbreak"
+tbreak' = unsafeCoerce _tbreak'
 
-tbreak_ :: Array JSX -> JSX
-tbreak_ children = tbreak { children }
+_tbreak'
+  :: ReactComponent (Record (SharedSVGProps Props_tbreak))
+_tbreak' = unsafePerformEffect (unsafeCreateDOMComponent "tbreak")
 
 type Props_text =
   ( _aria :: Object String
@@ -4947,14 +5217,18 @@ text
   -> JSX
 text = element text'
 
+text_ :: Array JSX -> JSX
+text_ children = text { children }
+
 text'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_text)
   => ReactComponent (Record attrs)
-text' = unsafeCreateDOMComponent "text"
+text' = unsafeCoerce _text'
 
-text_ :: Array JSX -> JSX
-text_ children = text { children }
+_text'
+  :: ReactComponent (Record (SharedSVGProps Props_text))
+_text' = unsafePerformEffect (unsafeCreateDOMComponent "text")
 
 type Props_textArea =
   ( _aria :: Object String
@@ -4994,14 +5268,18 @@ textArea
   -> JSX
 textArea = element textArea'
 
+textArea_ :: Array JSX -> JSX
+textArea_ children = textArea { children }
+
 textArea'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_textArea)
   => ReactComponent (Record attrs)
-textArea' = unsafeCreateDOMComponent "textArea"
+textArea' = unsafeCoerce _textArea'
 
-textArea_ :: Array JSX -> JSX
-textArea_ children = textArea { children }
+_textArea'
+  :: ReactComponent (Record (SharedSVGProps Props_textArea))
+_textArea' = unsafePerformEffect (unsafeCreateDOMComponent "textArea")
 
 type Props_textPath =
   ( _aria :: Object String
@@ -5089,14 +5367,18 @@ textPath
   -> JSX
 textPath = element textPath'
 
+textPath_ :: Array JSX -> JSX
+textPath_ children = textPath { children }
+
 textPath'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_textPath)
   => ReactComponent (Record attrs)
-textPath' = unsafeCreateDOMComponent "textPath"
+textPath' = unsafeCoerce _textPath'
 
-textPath_ :: Array JSX -> JSX
-textPath_ children = textPath { children }
+_textPath'
+  :: ReactComponent (Record (SharedSVGProps Props_textPath))
+_textPath' = unsafePerformEffect (unsafeCreateDOMComponent "textPath")
 
 type Props_title =
   ( _aria :: Object String
@@ -5118,14 +5400,18 @@ title
   -> JSX
 title = element title'
 
+title_ :: Array JSX -> JSX
+title_ children = title { children }
+
 title'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_title)
   => ReactComponent (Record attrs)
-title' = unsafeCreateDOMComponent "title"
+title' = unsafeCoerce _title'
 
-title_ :: Array JSX -> JSX
-title_ children = title { children }
+_title'
+  :: ReactComponent (Record (SharedSVGProps Props_title))
+_title' = unsafePerformEffect (unsafeCreateDOMComponent "title")
 
 type Props_tspan =
   ( _aria :: Object String
@@ -5226,14 +5512,18 @@ tspan
   -> JSX
 tspan = element tspan'
 
+tspan_ :: Array JSX -> JSX
+tspan_ children = tspan { children }
+
 tspan'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_tspan)
   => ReactComponent (Record attrs)
-tspan' = unsafeCreateDOMComponent "tspan"
+tspan' = unsafeCoerce _tspan'
 
-tspan_ :: Array JSX -> JSX
-tspan_ children = tspan { children }
+_tspan'
+  :: ReactComponent (Record (SharedSVGProps Props_tspan))
+_tspan' = unsafePerformEffect (unsafeCreateDOMComponent "tspan")
 
 type Props_unknown =
   ( _aria :: Object String
@@ -5252,14 +5542,18 @@ unknown
   -> JSX
 unknown = element unknown'
 
+unknown_ :: Array JSX -> JSX
+unknown_ children = unknown { children }
+
 unknown'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_unknown)
   => ReactComponent (Record attrs)
-unknown' = unsafeCreateDOMComponent "unknown"
+unknown' = unsafeCoerce _unknown'
 
-unknown_ :: Array JSX -> JSX
-unknown_ children = unknown { children }
+_unknown'
+  :: ReactComponent (Record (SharedSVGProps Props_unknown))
+_unknown' = unsafePerformEffect (unsafeCreateDOMComponent "unknown")
 
 type Props_use =
   ( _aria :: Object String
@@ -5359,14 +5653,18 @@ use
   -> JSX
 use = element use'
 
+use_ :: Array JSX -> JSX
+use_ children = use { children }
+
 use'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_use)
   => ReactComponent (Record attrs)
-use' = unsafeCreateDOMComponent "use"
+use' = unsafeCoerce _use'
 
-use_ :: Array JSX -> JSX
-use_ children = use { children }
+_use'
+  :: ReactComponent (Record (SharedSVGProps Props_use))
+_use' = unsafePerformEffect (unsafeCreateDOMComponent "use")
 
 type Props_video =
   ( _aria :: Object String
@@ -5423,14 +5721,18 @@ video
   -> JSX
 video = element video'
 
+video_ :: Array JSX -> JSX
+video_ children = video { children }
+
 video'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_video)
   => ReactComponent (Record attrs)
-video' = unsafeCreateDOMComponent "video"
+video' = unsafeCoerce _video'
 
-video_ :: Array JSX -> JSX
-video_ children = video { children }
+_video'
+  :: ReactComponent (Record (SharedSVGProps Props_video))
+_video' = unsafePerformEffect (unsafeCreateDOMComponent "video")
 
 type Props_view =
   ( _aria :: Object String
@@ -5452,11 +5754,15 @@ view
   -> JSX
 view = element view'
 
+view_ :: Array JSX -> JSX
+view_ children = view { children }
+
 view'
   :: forall attrs attrs_
    . Union attrs attrs_ (SharedSVGProps Props_view)
   => ReactComponent (Record attrs)
-view' = unsafeCreateDOMComponent "view"
+view' = unsafeCoerce _view'
 
-view_ :: Array JSX -> JSX
-view_ children = view { children }
+_view'
+  :: ReactComponent (Record (SharedSVGProps Props_view))
+_view' = unsafePerformEffect (unsafeCreateDOMComponent "view")

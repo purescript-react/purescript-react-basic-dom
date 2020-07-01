@@ -1,6 +1,7 @@
 module React.Basic.DOM.Internal where
 
 import Prelude
+import Effect (Effect)
 import React.Basic (JSX, ReactComponent, element)
 import React.Basic.Events (EventHandler)
 import Unsafe.Coerce (unsafeCoerce)
@@ -69,11 +70,11 @@ type SharedSVGProps specific
     | specific
     )
 
-unsafeCreateDOMComponent :: forall props. String -> ReactComponent { | props }
+unsafeCreateDOMComponent :: forall props. String -> Effect (ReactComponent { | props })
 unsafeCreateDOMComponent = unsafeCreateDOMComponent_ element
 
 foreign import unsafeCreateDOMComponent_ ::
   forall props.
   (ReactComponent props -> props -> JSX) ->
   String ->
-  ReactComponent props
+  Effect (ReactComponent props)

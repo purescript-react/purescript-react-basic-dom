@@ -11,12 +11,14 @@ const htmlHeader = `-- | ----------------------------------------
 module React.Basic.DOM.Generated where
 
 import Data.Nullable (Nullable)
+import Effect.Unsafe (unsafePerformEffect)
 import Foreign.Object (Object)
 import Prim.Row (class Union)
-import Web.DOM (Node)
 import React.Basic (JSX, ReactComponent, Ref, element)
 import React.Basic.DOM.Internal (CSS, unsafeCreateDOMComponent)
 import React.Basic.Events (EventHandler)
+import Unsafe.Coerce (unsafeCoerce)
+import Web.DOM (Node)
 
 `;
 
@@ -39,11 +41,13 @@ const svgHeader = `-- | ----------------------------------------
 module React.Basic.DOM.SVG where
 
 import Data.Nullable (Nullable)
+import Effect.Unsafe (unsafePerformEffect)
 import Foreign.Object (Object)
 import Prim.Row (class Union)
-import Web.DOM (Node)
 import React.Basic (JSX, ReactComponent, Ref, element)
 import React.Basic.DOM.Internal (SharedSVGProps, unsafeCreateDOMComponent)
+import Unsafe.Coerce (unsafeCoerce)
+import Web.DOM (Node)
 
 `;
 
@@ -105,13 +109,7 @@ const generatePropTypes = (elements, props, sharedPropType) =>
        . Union attrs attrs_ ${propType}
       => Record attrs
       -> JSX
-    ${symbol} = element ${symbol}'
-
-    ${symbol}'
-      :: forall attrs attrs_
-       . Union attrs attrs_ ${propType}
-      => ReactComponent (Record attrs)
-    ${symbol}' = unsafeCreateDOMComponent "${e}"${
+    ${symbol} = element ${symbol}'${
       noChildren
         ? ""
         : `
@@ -119,6 +117,16 @@ const generatePropTypes = (elements, props, sharedPropType) =>
     ${e}_ :: Array JSX -> JSX
     ${e}_ children = ${symbol} { children }`
     }
+
+    ${symbol}'
+      :: forall attrs attrs_
+       . Union attrs attrs_ ${propType}
+      => ReactComponent (Record attrs)
+    ${symbol}' = unsafeCoerce _${e}'
+
+    _${e}'
+      :: ReactComponent (Record ${propType})
+    _${e}' = unsafePerformEffect (unsafeCreateDOMComponent "${e}")
 `;
   }).map(x => x.replace(/^\n\ {4}/, "").replace(/\n\ {4}/g, "\n"))
   .join("\n");
