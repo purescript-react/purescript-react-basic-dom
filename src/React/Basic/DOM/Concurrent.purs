@@ -7,6 +7,10 @@ import Effect (Effect)
 import React.Basic (JSX)
 import Web.DOM (Element)
 
--- Alternative to `render` which enables React's concurrent mode.
--- This is an unstable and experimental feature. See the React docs for more info.
-foreign import renderConcurrentMode :: JSX -> Element -> Effect Unit
+foreign import data ReactRoot :: Type
+
+foreign import createRoot :: Element -> Effect ReactRoot
+
+foreign import createBlockingRoot :: Element -> Effect ReactRoot
+
+foreign import renderRoot :: ReactRoot -> JSX -> Effect Unit
