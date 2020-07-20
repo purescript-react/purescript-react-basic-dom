@@ -2,10 +2,10 @@
 
 const ReactDOM = require("react-dom");
 
-exports["render'"] = (jsx) => (node) => (callback) => () =>
+exports.renderThen = (jsx) => (node) => (callback) => () =>
   ReactDOM.render(jsx, node, callback);
 
-exports["hydrate'"] = (jsx) => (node) => (callback) => () =>
+exports.hydrateThen = (jsx) => (node) => (callback) => () =>
   ReactDOM.hydrate(jsx, node, callback);
 
 exports.unmount = (node) => () => ReactDOM.unmountComponentAtNode(node);
