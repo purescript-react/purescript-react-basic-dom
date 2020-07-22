@@ -17928,6 +17928,7 @@ type Props_video =
   , colSpan :: Int
   , contentEditable :: Boolean
   , contextMenu :: String
+  , controls :: Boolean
   , crossOrigin :: String
   , dangerouslySetInnerHTML :: { __html :: String }
   , datatype :: String
@@ -17941,6 +17942,7 @@ type Props_video =
   , formNoValidate :: Boolean
   , formTarget :: String
   , frameBorder :: String
+  , height :: String
   , hidden :: Boolean
   , hrefLang :: String
   , htmlFor :: String
@@ -17959,16 +17961,21 @@ type Props_video =
   , keyParams :: String
   , keyType :: String
   , lang :: String
+  , loop :: Boolean
   , marginHeight :: String
   , marginWidth :: String
   , maxLength :: Int
   , mediaGroup :: String
   , minLength :: Int
+  , muted :: Boolean
   , noValidate :: Boolean
+  , onAbort :: EventHandler
   , onAnimationEnd :: EventHandler
   , onAnimationIteration :: EventHandler
   , onAnimationStart :: EventHandler
   , onBlur :: EventHandler
+  , onCanPlay :: EventHandler
+  , onCanPlayThrough :: EventHandler
   , onClick :: EventHandler
   , onCompositionEnd :: EventHandler
   , onCompositionStart :: EventHandler
@@ -17985,12 +17992,20 @@ type Props_video =
   , onDragOver :: EventHandler
   , onDragStart :: EventHandler
   , onDrop :: EventHandler
+  , onDurationChange :: EventHandler
+  , onEmptied :: EventHandler
+  , onEncrypted :: EventHandler
+  , onEnded :: EventHandler
+  , onError :: EventHandler
   , onFocus :: EventHandler
   , onGotPointerCapture :: EventHandler
   , onInvalid :: EventHandler
   , onKeyDown :: EventHandler
   , onKeyPress :: EventHandler
   , onKeyUp :: EventHandler
+  , onLoadStart :: EventHandler
+  , onLoadedData :: EventHandler
+  , onLoadedMetadata :: EventHandler
   , onLostPointerCapture :: EventHandler
   , onMouseDown :: EventHandler
   , onMouseEnter :: EventHandler
@@ -18000,6 +18015,9 @@ type Props_video =
   , onMouseOver :: EventHandler
   , onMouseUp :: EventHandler
   , onPaste :: EventHandler
+  , onPause :: EventHandler
+  , onPlay :: EventHandler
+  , onPlaying :: EventHandler
   , onPointerCancel :: EventHandler
   , onPointerDown :: EventHandler
   , onPointerEnter :: EventHandler
@@ -18008,15 +18026,28 @@ type Props_video =
   , onPointerOut :: EventHandler
   , onPointerOver :: EventHandler
   , onPointerUp :: EventHandler
+  , onProgress :: EventHandler
+  , onRateChange :: EventHandler
+  , onScroll :: EventHandler
+  , onSeeked :: EventHandler
+  , onSeeking :: EventHandler
   , onSelect :: EventHandler
+  , onStalled :: EventHandler
   , onSubmit :: EventHandler
+  , onSuspend :: EventHandler
+  , onTimeUpdate :: EventHandler
   , onTouchCancel :: EventHandler
   , onTouchEnd :: EventHandler
   , onTouchMove :: EventHandler
   , onTouchStart :: EventHandler
   , onTransitionEnd :: EventHandler
+  , onVolumeChange :: EventHandler
+  , onWaiting :: EventHandler
   , onWheel :: EventHandler
+  , playsInline :: Boolean
+  , poster :: String
   , prefix :: String
+  , preload :: String
   , property :: String
   , radioGroup :: String
   , readOnly :: Boolean
@@ -18028,6 +18059,7 @@ type Props_video =
   , seamless :: Boolean
   , security :: String
   , spellCheck :: Boolean
+  , src :: String
   , srcDoc :: JSX
   , srcLang :: String
   , srcSet :: String
@@ -18039,6 +18071,7 @@ type Props_video =
   , unselectable :: Boolean
   , useMap :: String
   , vocab :: String
+  , width :: String
   , wmode :: String
   )
 
