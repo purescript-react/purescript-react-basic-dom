@@ -41,6 +41,7 @@ module React.Basic.DOM.Events
   , clientY
   , button
   , buttons
+  , clipboardData
   ) where
 
 import Prelude
