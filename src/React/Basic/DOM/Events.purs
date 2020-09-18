@@ -41,6 +41,7 @@ module React.Basic.DOM.Events
   , clientY
   , button
   , buttons
+  , dataTransfer
   , clipboardData
   ) where
 
@@ -181,6 +182,10 @@ button = unsafeEventFn \e -> toMaybe (unsafeCoerce e).button
 
 buttons :: EventFn SyntheticEvent (Maybe Int)
 buttons = unsafeEventFn \e -> toMaybe (unsafeCoerce e).buttons
+
+-- | Drag event fields
+dataTransfer :: EventFn SyntheticEvent (Maybe DataTransfer)
+dataTransfer = unsafeEventFn \e -> toMaybe (unsafeCoerce e).dataTransfer
 
 -- \ Shared keyboard + mouse fields
 ctrlKey :: EventFn SyntheticEvent (Maybe Boolean)
