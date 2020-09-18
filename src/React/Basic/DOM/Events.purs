@@ -42,6 +42,7 @@ module React.Basic.DOM.Events
   , button
   , buttons
   , dataTransfer
+  , clipboardData
   ) where
 
 import Prelude
