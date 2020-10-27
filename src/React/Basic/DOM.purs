@@ -2,8 +2,8 @@
 -- | safely.
 -- |
 -- | __*Note:* DOM element props are provided as records, and checked using `Union`
--- |   constraints. This means that we don't need to provide all props, but any we
--- |   do provide must have the correct types.__
+-- |   constraints. This allows callers to supply only a subset of the props, and the
+-- |   compiler will ensure that the provided props exist and have the correct types.__
 module React.Basic.DOM
   ( module Internal
   , render
