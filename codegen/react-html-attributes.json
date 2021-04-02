@@ -294,7 +294,8 @@
     "sizes",
     "src",
     "width",
-    "onLoad"
+    "onLoad",
+    "onError"
   ],
   "input": [
     "accept",
