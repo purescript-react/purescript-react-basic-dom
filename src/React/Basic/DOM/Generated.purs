@@ -8016,6 +8016,7 @@ type Props_img =
   , onDragOver :: EventHandler
   , onDragStart :: EventHandler
   , onDrop :: EventHandler
+  , onError :: EventHandler
   , onFocus :: EventHandler
   , onGotPointerCapture :: EventHandler
   , onInvalid :: EventHandler
