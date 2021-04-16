@@ -139,6 +139,7 @@ type Props_a =
   , seamless :: Boolean
   , security :: String
   , shape :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -295,6 +296,7 @@ type Props_abbr =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -450,6 +452,7 @@ type Props_address =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -609,6 +612,7 @@ type Props_area =
   , seamless :: Boolean
   , security :: String
   , shape :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -762,6 +766,7 @@ type Props_article =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -916,6 +921,7 @@ type Props_aside =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -1098,6 +1104,7 @@ type Props_audio =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , src :: String
   , srcDoc :: JSX
@@ -1253,6 +1260,7 @@ type Props_b =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -1407,6 +1415,7 @@ type Props_base =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -1559,6 +1568,7 @@ type Props_bdi =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -1714,6 +1724,7 @@ type Props_bdo =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -1869,6 +1880,7 @@ type Props_blockquote =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -2023,6 +2035,7 @@ type Props_body =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -2176,6 +2189,7 @@ type Props_br =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -2330,6 +2344,7 @@ type Props_button =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -2487,6 +2502,7 @@ type Props_canvas =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -2642,6 +2658,7 @@ type Props_caption =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -2796,6 +2813,7 @@ type Props_cite =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -2950,6 +2968,7 @@ type Props_code =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -3103,6 +3122,7 @@ type Props_col =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , span :: Int
   , spellCheck :: Boolean
   , srcDoc :: JSX
@@ -3256,6 +3276,7 @@ type Props_colgroup =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , span :: Int
   , spellCheck :: Boolean
   , srcDoc :: JSX
@@ -3412,6 +3433,7 @@ type Props_data =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -3567,6 +3589,7 @@ type Props_datalist =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -3721,6 +3744,7 @@ type Props_dd =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -3876,6 +3900,7 @@ type Props_del =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -4031,6 +4056,7 @@ type Props_details =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -4185,6 +4211,7 @@ type Props_dfn =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -4341,6 +4368,7 @@ type Props_dialog =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -4495,6 +4523,7 @@ type Props_div =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -4649,6 +4678,7 @@ type Props_dl =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -4803,6 +4833,7 @@ type Props_dt =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -4957,6 +4988,7 @@ type Props_em =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -5111,6 +5143,7 @@ type Props_embed =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , src :: String
   , srcDoc :: JSX
@@ -5268,6 +5301,7 @@ type Props_fieldset =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -5422,6 +5456,7 @@ type Props_figcaption =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -5576,6 +5611,7 @@ type Props_figure =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -5730,6 +5766,7 @@ type Props_footer =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -5893,6 +5930,7 @@ type Props_form =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -6048,6 +6086,7 @@ type Props_h1 =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -6202,6 +6241,7 @@ type Props_h2 =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -6356,6 +6396,7 @@ type Props_h3 =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -6510,6 +6551,7 @@ type Props_h4 =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -6664,6 +6706,7 @@ type Props_h5 =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -6818,6 +6861,7 @@ type Props_h6 =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -6973,6 +7017,7 @@ type Props_head =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -7127,6 +7172,7 @@ type Props_header =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -7281,6 +7327,7 @@ type Props_hgroup =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -7435,6 +7482,7 @@ type Props_hr =
   , seamless :: Boolean
   , security :: String
   , size :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -7588,6 +7636,7 @@ type Props_html =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -7742,6 +7791,7 @@ type Props_i =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -7900,6 +7950,7 @@ type Props_iframe =
   , scrolling :: String
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , src :: String
   , srcDoc :: JSX
@@ -8061,6 +8112,7 @@ type Props_img =
   , seamless :: Boolean
   , security :: String
   , sizes :: String
+  , slot :: String
   , spellCheck :: Boolean
   , src :: String
   , srcDoc :: JSX
@@ -8236,6 +8288,7 @@ type Props_input =
   , seamless :: Boolean
   , security :: String
   , size :: Int
+  , slot :: String
   , spellCheck :: Boolean
   , src :: String
   , srcDoc :: JSX
@@ -8394,6 +8447,7 @@ type Props_ins =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -8548,6 +8602,7 @@ type Props_kbd =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -8706,6 +8761,7 @@ type Props_keygen =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -8861,6 +8917,7 @@ type Props_label =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -9015,6 +9072,7 @@ type Props_legend =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -9169,6 +9227,7 @@ type Props_li =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -9332,6 +9391,7 @@ type Props_link =
   , seamless :: Boolean
   , security :: String
   , sizes :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -9486,6 +9546,7 @@ type Props_main =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -9641,6 +9702,7 @@ type Props_map =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -9795,6 +9857,7 @@ type Props_mark =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -9949,6 +10012,7 @@ type Props_math =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -10103,6 +10167,7 @@ type Props_menu =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -10257,6 +10322,7 @@ type Props_menuitem =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -10412,6 +10478,7 @@ type Props_meta =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -10568,6 +10635,7 @@ type Props_meter =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -10723,6 +10791,7 @@ type Props_nav =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -10877,6 +10946,7 @@ type Props_noscript =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -11035,6 +11105,7 @@ type Props_object =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -11192,6 +11263,7 @@ type Props_ol =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -11350,6 +11422,7 @@ type Props_optgroup =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -11507,6 +11580,7 @@ type Props_option =
   , seamless :: Boolean
   , security :: String
   , selected :: Boolean
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -11664,6 +11738,7 @@ type Props_output =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -11818,6 +11893,7 @@ type Props_p =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -11972,6 +12048,7 @@ type Props_param =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -12125,6 +12202,7 @@ type Props_picture =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -12279,6 +12357,7 @@ type Props_pre =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -12435,6 +12514,7 @@ type Props_progress =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -12591,6 +12671,7 @@ type Props_q =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -12745,6 +12826,7 @@ type Props_rb =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -12899,6 +12981,7 @@ type Props_rp =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -13053,6 +13136,7 @@ type Props_rt =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -13207,6 +13291,7 @@ type Props_rtc =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -13361,6 +13446,7 @@ type Props_ruby =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -13515,6 +13601,7 @@ type Props_s =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -13669,6 +13756,7 @@ type Props_samp =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -13827,6 +13915,7 @@ type Props_script =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , src :: String
   , srcDoc :: JSX
@@ -13983,6 +14072,7 @@ type Props_section =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -14146,6 +14236,7 @@ type Props_select =
   , seamless :: Boolean
   , security :: String
   , size :: Int
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -14302,6 +14393,7 @@ type Props_slot =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -14456,6 +14548,7 @@ type Props_small =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -14611,6 +14704,7 @@ type Props_source =
   , seamless :: Boolean
   , security :: String
   , sizes :: String
+  , slot :: String
   , spellCheck :: Boolean
   , src :: String
   , srcDoc :: JSX
@@ -14764,6 +14858,7 @@ type Props_span =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -14918,6 +15013,7 @@ type Props_strong =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -15074,6 +15170,7 @@ type Props_style =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -15230,6 +15327,7 @@ type Props_sub =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -15384,6 +15482,7 @@ type Props_summary =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -15538,6 +15637,7 @@ type Props_sup =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -15693,6 +15793,7 @@ type Props_table =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -15849,6 +15950,7 @@ type Props_tbody =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -16006,6 +16108,7 @@ type Props_td =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -16161,6 +16264,7 @@ type Props_template =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -16327,6 +16431,7 @@ type Props_textarea =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -16483,6 +16588,7 @@ type Props_tfoot =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -16640,6 +16746,7 @@ type Props_th =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -16795,6 +16902,7 @@ type Props_thead =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -16949,6 +17057,7 @@ type Props_time =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -17103,6 +17212,7 @@ type Props_title =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -17257,6 +17367,7 @@ type Props_tr =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -17413,6 +17524,7 @@ type Props_track =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , src :: String
   , srcDoc :: JSX
@@ -17565,6 +17677,7 @@ type Props_u =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -17719,6 +17832,7 @@ type Props_ul =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -17874,6 +17988,7 @@ type Props_var =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
@@ -18059,6 +18174,7 @@ type Props_video =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , src :: String
   , srcDoc :: JSX
@@ -18214,6 +18330,7 @@ type Props_wbr =
   , scoped :: Boolean
   , seamless :: Boolean
   , security :: String
+  , slot :: String
   , spellCheck :: Boolean
   , srcDoc :: JSX
   , srcLang :: String
