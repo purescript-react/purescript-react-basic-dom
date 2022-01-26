@@ -7912,6 +7912,7 @@ type Props_iframe =
   , onKeyDown :: EventHandler
   , onKeyPress :: EventHandler
   , onKeyUp :: EventHandler
+  , onLoad :: EventHandler
   , onLostPointerCapture :: EventHandler
   , onMouseDown :: EventHandler
   , onMouseEnter :: EventHandler
