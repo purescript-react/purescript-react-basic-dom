@@ -50,6 +50,7 @@ module.exports.types = {
   "formNoValidate": "Boolean",
   "hidden": "Boolean",
   "itemScope": "Boolean",
+  "loading": "String",
   "loop": "Boolean",
   "maxLength": "Int",
   "minLength": "Int",

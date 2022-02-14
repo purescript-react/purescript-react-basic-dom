@@ -282,6 +282,7 @@
   ],
   "iframe": [
     "height",
+    "loading",
     "name",
     "sandbox",
     "scrolling",
@@ -291,6 +292,7 @@
   "img": [
     "alt",
     "height",
+    "loading",
     "name",
     "sizes",
     "src",
