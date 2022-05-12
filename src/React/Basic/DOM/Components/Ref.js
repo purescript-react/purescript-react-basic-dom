@@ -1,8 +1,6 @@
-"use strict";
+import React from "react";
 
-var React = require("react");
-
-exports.mkRef = function(toMaybe) {
+export function mkRef(toMaybe) {
   var Ref = function(_props) {
     this.state = { node: null };
     this.ref = React.createRef();
@@ -40,4 +38,4 @@ exports.mkRef = function(toMaybe) {
   };
 
   return Ref;
-};
+}

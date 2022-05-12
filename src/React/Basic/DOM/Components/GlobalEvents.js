@@ -1,26 +1,23 @@
-"use strict";
-
-var React = require("react");
-
-exports._passiveSupported = null;
+import React from "react";
+export var _passiveSupported = null;
 
 function checkPassiveSupported() {
-  if (exports._passiveSupported == null) {
+  if (_passiveSupported == null) {
     try {
       window.addEventListener(
         "test",
         null,
         Object.defineProperty({}, "passive", {
           get: function() {
-            exports._passiveSupported = true;
+            _passiveSupported = true;
           }
         })
       );
     } catch (err) {
-      exports._passiveSupported = false;
+      _passiveSupported = false;
     }
   }
-  return exports._passiveSupported;
+  return _passiveSupported;
 }
 
 function createHandler(h) {
@@ -87,9 +84,9 @@ GlobalEvent.prototype.render = function() {
   return this.props.child;
 };
 
-exports.globalEvent_ = GlobalEvent;
+export {GlobalEvent as globalEvent_};
 
-exports.unsafeWindowEventTarget = (function() {
+export var unsafeWindowEventTarget = (function() {
   if (typeof window === "undefined") {
     return undefined;
   } else {
