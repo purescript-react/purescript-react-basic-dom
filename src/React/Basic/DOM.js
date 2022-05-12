@@ -1,13 +1,21 @@
 "use strict";
 
-const ReactDOM = require("react-dom");
+import ReactDOM from "react-dom";
 
-exports.renderThen = (jsx) => (node) => (callback) => () =>
-  ReactDOM.render(jsx, node, callback);
+export function renderThen(jsx) {
+  return (node) => (callback) => () =>
+    ReactDOM.render(jsx, node, callback);
+}
 
-exports.hydrateThen = (jsx) => (node) => (callback) => () =>
-  ReactDOM.hydrate(jsx, node, callback);
+export function hydrateThen(jsx) {
+  return (node) => (callback) => () =>
+    ReactDOM.hydrate(jsx, node, callback);
+}
 
-exports.unmount = (node) => () => ReactDOM.unmountComponentAtNode(node);
+export function unmount(node) {
+  return () => ReactDOM.unmountComponentAtNode(node);
+}
 
-exports.createPortal = (jsx) => (node) => ReactDOM.createPortal(jsx, node);
+export function createPortal(jsx) {
+  return (node) => ReactDOM.createPortal(jsx, node);
+}

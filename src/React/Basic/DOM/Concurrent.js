@@ -1,12 +1,16 @@
-"use strict";
-
-const ReactDOM = require("react-dom");
+import ReactDOM from "react-dom";
 const createRoot = ReactDOM.createRoot || ReactDOM.unstable_createRoot;
 const createBlockingRoot =
   ReactDOM.createBlockingRoot || ReactDOM.unstable_createBlockingRoot;
 
-exports.createRoot = (element) => () => createRoot(element);
+export function createRoot(element) {
+  return () => createRoot(element);
+}
 
-exports.createBlockingRoot = (element) => () => createBlockingRoot(element);
+export function createBlockingRoot(element) {
+  return () => createBlockingRoot(element);
+}
 
-exports.renderRoot = (root) => (jsx) => () => root.render(jsx);
+export function renderRoot(root) {
+  return (jsx) => () => root.render(jsx);
+}
