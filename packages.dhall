@@ -105,21 +105,8 @@ in  upstream
 -------------------------------
 -}
 let upstream =
-      https://github.com/purescript/package-sets/releases/download/psc-0.15.0-20220510/packages.dhall
-        sha256:0b0d4db1f2f0acd3b37fa53220644ac6f64cf9b5d0226fd097c0593df563d5be
+      https://github.com/purescript/package-sets/releases/download/psc-0.15.0-20220522/packages.dhall
+        sha256:43895efaec7af246b60b59cfbf451cd9d3d84a5327de8c0945e2de5c9fd2fcf2
 
-{- temporary -}
-let additions =
-      { react-basic =
-        { dependencies =
-          [ "effect"
-          , "prelude"
-          , "record"
-          ]
-        , repo = "https://github.com/lumihq/purescript-react-basic.git"
-        , version = "v17.0.0"
-        }
-      }
-
-in  upstream // additions
+in  upstream
  
