@@ -1,7 +1,3 @@
-"use strict";
-
-const ReactDOMServer = require("react-dom/server");
-
-exports.renderToString = ReactDOMServer.renderToString;
-
-exports.renderToStaticMarkup = ReactDOMServer.renderToStaticMarkup;
+import ReactDOMServer from "react-dom/server";
+export var renderToString = ReactDOMServer.renderToString;
+export var renderToStaticMarkup = ReactDOMServer.renderToStaticMarkup;

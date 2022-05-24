@@ -4,10 +4,12 @@ You can edit this file as you like.
 -}
 { name = "react-basic-dom"
 , dependencies =
-  [ "console"
-  , "effect"
+  [ "effect"
+  , "foldable-traversable"
   , "foreign-object"
-  , "psci-support"
+  , "maybe"
+  , "nullable"
+  , "prelude"
   , "react-basic"
   , "unsafe-coerce"
   , "web-dom"
