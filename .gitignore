@@ -9,3 +9,5 @@
 /.psa*
 /.vscode/
 /.spago/
+.direnv
+*.swp
