@@ -11,3 +11,4 @@
 /.spago/
 .direnv
 *.swp
+/generated-docs
