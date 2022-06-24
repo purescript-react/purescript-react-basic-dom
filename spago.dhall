@@ -4,13 +4,15 @@ You can edit this file as you like.
 -}
 { name = "react-basic-dom"
 , dependencies =
-  [ "effect"
+  [ "arrays"
+  , "effect"
   , "foldable-traversable"
   , "foreign-object"
   , "maybe"
   , "nullable"
   , "prelude"
   , "react-basic"
+  , "record"
   , "unsafe-coerce"
   , "web-dom"
   , "web-events"

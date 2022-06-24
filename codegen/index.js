@@ -2,6 +2,7 @@ const fs = require("fs");
 const { htmlProps, svgProps, voids, types, typesByElement, reserved } = require("./consts");
 const changeCase = require('change-case')
 const htmlGenFile = "../src/React/Basic/DOM/Generated.purs";
+const htmlSimplifiedGenFile = "../src/React/Basic/DOM/Simplified/Generated.purs";
 const svgGenFile = "../src/React/Basic/DOM/SVG.purs";
 
 const htmlHeader = `-- | ----------------------------------------
@@ -17,6 +18,26 @@ import Prim.Row (class Union)
 import React.Basic (JSX, ReactComponent, Ref, element)
 import React.Basic.DOM.Internal (CSS, unsafeCreateDOMComponent)
 import React.Basic.Events (EventHandler)
+import Unsafe.Coerce (unsafeCoerce)
+import Web.DOM (Node)
+
+`;
+
+const simplifiedHtmlHeader = `-- | ----------------------------------------
+-- | THIS FILE IS GENERATED -- DO NOT EDIT IT
+-- | ----------------------------------------
+
+module React.Basic.DOM.Simplified.Generated where
+
+import Data.Nullable (Nullable)
+import Effect.Unsafe (unsafePerformEffect)
+import Foreign.Object (Object)
+import Prim.Row (class Nub, class Union)
+import React.Basic (JSX, ReactComponent, Ref, element)
+import React.Basic.DOM.Internal (CSS, unsafeCreateDOMComponent)
+import React.Basic.DOM.Simplified.ToJSX (class ToJSX, toJSX)
+import React.Basic.Events (EventHandler)
+import Record as Record
 import Unsafe.Coerce (unsafeCoerce)
 import Web.DOM (Node)
 
@@ -131,11 +152,63 @@ const generatePropTypes = (elements, props, sharedPropType) =>
   }).map(x => x.replace(/^\n\ {4}/, "").replace(/\n\ {4}/g, "\n"))
   .join("\n");
 
+  const generateSimplifiedPropTypes = (elements, props, sharedPropType) =>
+  elements.map(e => {
+    const noChildren = voids.includes(e);
+    const symbol = reserved.includes(e) ? `${e}'` : e;
+
+    const propType = sharedPropType ? `(${sharedPropType} Props_${e})` : `Props_${e}`
+
+    return noChildren ? `` : `
+    type Props_${e} =${printRecord(e,
+      ( reactProps.concat("children")
+      )
+        .concat(props[e] || [], props["*"] || [])
+        .sort()
+    )}
+
+    ${symbol}
+      :: forall attrsNoChildren attrsWithDuplicate attrs attrs_ jsx
+       . Union attrs attrs_ ${propType}
+      => ToJSX jsx
+      => Union (children :: Array JSX) attrsNoChildren attrsWithDuplicate
+      => Nub (children :: Array JSX | attrsNoChildren) attrs
+      => Record attrsNoChildren
+      -> jsx
+      -> JSX
+    ${symbol} props children = element _internal${symbol} propsWithChildren
+      where
+      propsWithChildren :: { | attrs }
+      propsWithChildren = Record.merge { children: toJSX children } props
+
+    ${symbol}' :: forall jsx. ToJSX jsx => jsx -> JSX
+    ${symbol}' = ${symbol} {}
+
+    _internal${symbol}
+      :: forall attrs attrs_
+       . Union attrs attrs_ ${propType}
+      => ReactComponent (Record attrs)
+    _internal${symbol} = unsafeCoerce _internal${symbol}'
+
+    _internal${symbol}'
+      :: ReactComponent (Record ${propType})
+    _internal${symbol}' = unsafePerformEffect (unsafeCreateDOMComponent "${symbol}")
+
+`;
+  }).map(x => x.replace(/^\n\ {4}/, "").replace(/\n\ {4}/g, "\n"))
+  .join("\n");
+
 const htmlTagTypes = generatePropTypes(htmlProps.elements.html, htmlProps, null);
+const htmlSimplifiedTagTypes = generateSimplifiedPropTypes(htmlProps.elements.html, htmlProps, null);
 const svgTagTypes = generatePropTypes(Object.keys(camelCaseSvgProps), camelCaseSvgProps, 'SharedSVGProps');
 
 console.log(`Writing "${htmlGenFile}" ...`);
 fs.writeFileSync(htmlGenFile, htmlHeader + htmlTagTypes);
+
+console.log(`Writing "${htmlSimplifiedGenFile}" ...`);
+fs.writeFileSync(htmlSimplifiedGenFile, simplifiedHtmlHeader + htmlSimplifiedTagTypes);
+
 console.log(`Writing "${svgGenFile}" ...`);
 fs.writeFileSync(svgGenFile, svgHeader + svgTagTypes);
+
 console.log("Done.");
