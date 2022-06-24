@@ -9,10 +9,6 @@ import Data.Array (singleton)
 import React.Basic (JSX)
 import Unsafe.Coerce (unsafeCoerce)
 
--- | Create a text node.
-text :: String -> JSX
-text = unsafeCoerce
-
 class ToJSX jsx where
   toJSX :: jsx -> Array JSX
 
@@ -21,6 +17,6 @@ instance ToJSX (Array JSX) where
 else instance (ToJSX t) => ToJSX (Array t) where
   toJSX arr = arr >>= toJSX
 else instance ToJSX String where
-  toJSX = text >>> singleton
+  toJSX = unsafeCoerce >>> singleton
 else instance ToJSX JSX where
   toJSX = singleton
