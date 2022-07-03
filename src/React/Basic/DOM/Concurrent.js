@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 const createRoot_ = ReactDOM.createRoot || ReactDOM.unstable_createRoot;
 const createBlockingRoot_ =
   ReactDOM.createBlockingRoot || ReactDOM.unstable_createBlockingRoot;
