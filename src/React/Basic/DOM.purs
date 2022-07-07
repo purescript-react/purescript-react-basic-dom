@@ -28,6 +28,7 @@ import Web.DOM (Element)
 -- | a DOM element.
 -- |
 -- | __*Note:* Relies on `ReactDOM.render`__
+-- | __*Note:* `render` has been replaced with `createRoot` in React 18
 render :: JSX -> Element -> Effect Unit
 render jsx node = render' jsx node (pure unit)
 
@@ -36,6 +37,7 @@ render jsx node = render' jsx node (pure unit)
 -- | DOM update is complete.
 -- |
 -- | __*Note:* Relies on `ReactDOM.render`__
+-- | __*Note:* `render` has been replaced with `createRoot` in React 18
 render' :: JSX -> Element -> Effect Unit -> Effect Unit
 render' = renderThen
 
@@ -48,6 +50,7 @@ foreign import renderThen :: JSX -> Element -> Effect Unit -> Effect Unit
 -- | __*Note:* Relies on `ReactDOM.hydrate`, generally only
 -- |   used with `ReactDOMServer.renderToNodeStream` or
 -- |   `ReactDOMServer.renderToString`__
+-- | __*Note:* `hydrate` has been replaced with `hydrateRoot` in React 18
 hydrate :: JSX -> Element -> Effect Unit
 hydrate jsx node = hydrate' jsx node (pure unit)
 
@@ -59,6 +62,7 @@ hydrate jsx node = hydrate' jsx node (pure unit)
 -- | __*Note:* Relies on `ReactDOM.hydrate`, generally only
 -- |   used with `ReactDOMServer.renderToNodeStream` or
 -- |   `ReactDOMServer.renderToString`__
+-- | __*Note:* `hydrate` has been replaced with `hydrateRoot` in React 18
 hydrate' :: JSX -> Element -> Effect Unit -> Effect Unit
 hydrate' = hydrateThen
 
@@ -69,6 +73,7 @@ foreign import hydrateThen :: JSX -> Element -> Effect Unit -> Effect Unit
 -- | if an app existed and was unmounted successfully.
 -- |
 -- | __*Note:* Relies on `ReactDOM.unmountComponentAtNode`__
+-- | __*Note:* `unmount` has been replaced with `Client.unmountRoot` in React 18
 foreign import unmount :: Element -> Effect Boolean
 
 -- | Divert a render tree into a separate DOM node. The node's
