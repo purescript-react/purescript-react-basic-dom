@@ -1,18 +1,11 @@
 import ReactDOMClient from "react-dom/client";
 
-export function createRoot(container) {
-  return () => ReactDOMClient.createRoot(container);
-}
+export const createRoot = (container) => () =>
+  ReactDOMClient.createRoot(container);
 
-export function hydrateRoot(container) {
-  return (initialChildren) => () =>
-    ReactDOMClient.hydrateRoot(container, initialChildren);
-}
+export const hydrateRoot = (container) => (initialChildren) => () =>
+  ReactDOMClient.hydrateRoot(container, initialChildren);
 
-export function renderRoot(root) {
-  return (children) => () => root.render(children);
-}
+export const renderRoot = (root) => (children) => () => root.render(children);
 
-export function unmountRoot(root) {
-  return () => root.unmount(root);
-}
+export const unmountRoot = (root) => () => root.unmount(root);
