@@ -14,6 +14,7 @@
         "output"
     ],
     "dependencies": {
+        "purescript-arrays": "^v7.0.0",
         "purescript-effect": "^v4.0.0",
         "purescript-foldable-traversable": "^v6.0.0",
         "purescript-foreign-object": "^v4.0.0",
@@ -21,6 +22,7 @@
         "purescript-nullable": "^v6.0.0",
         "purescript-prelude": "^v6.0.0",
         "purescript-react-basic": "^v17.0.0",
+        "purescript-record": "^v4.0.0",
         "purescript-unsafe-coerce": "^v6.0.0",
         "purescript-web-dom": "^v6.0.0",
         "purescript-web-events": "^v4.0.0",
