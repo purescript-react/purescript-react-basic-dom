@@ -32,9 +32,9 @@ import Unsafe.Coerce (unsafeCoerce)
 -- | ...
 -- | 
 -- | -- Build your jsx
--- | el NextUI.container {} $ 
--- |   el NextUI.row {} $ 
--- |   el NextUI.col {} $ 
+-- | el container {} $ 
+-- |   el row {} $ 
+-- |   el col {} $ 
 -- |   R.div {} "Some text"
 -- | ```
 el
