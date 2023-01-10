@@ -102,7 +102,7 @@ nativeEvent = unsafeEventFn \e -> (unsafeCoerce e).nativeEvent
 
 preventDefault :: EventFn SyntheticEvent SyntheticEvent
 preventDefault = unsafeEventFn \e -> unsafePerformEffect do
-  _ <- (unsafeCoerce e).preventDefault
+  _ <- propagateThis (unsafeCoerce e).preventDefault e
   pure e
 
 isDefaultPrevented :: EventFn SyntheticEvent Boolean
@@ -111,7 +111,7 @@ isDefaultPrevented = unsafeEventFn \e -> unsafePerformEffect do
 
 stopPropagation :: EventFn SyntheticEvent SyntheticEvent
 stopPropagation = unsafeEventFn \e -> unsafePerformEffect do
-  _ <- (unsafeCoerce e).stopPropagation
+  _ <- propagateThis (unsafeCoerce e).stopPropagation e
   pure e
 
 isPropagationStopped :: EventFn SyntheticEvent Boolean
@@ -207,3 +207,5 @@ clipboardData = unsafeEventFn \e -> toMaybe (unsafeCoerce e).clipboardData
 -- \ Composition Events
 compositionData :: EventFn SyntheticEvent (Maybe String)
 compositionData = unsafeEventFn \e -> toMaybe (unsafeCoerce e).data
+
+foreign import propagateThis :: forall f t a. f -> t -> Effect a
