@@ -44,6 +44,7 @@ module.exports.types = {
   "controls": "Boolean",
   "dangerouslySetInnerHTML": "{ __html :: String }",
   "default": "Boolean",
+  "defaultChecked": "Boolean",
   "defer": "Boolean",
   "disabled": "Boolean",
   "draggable": "Boolean",
