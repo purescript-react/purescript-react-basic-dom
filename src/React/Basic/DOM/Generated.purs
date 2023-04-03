@@ -8180,7 +8180,7 @@ type Props_input =
   , dangerouslySetInnerHTML :: { __html :: String }
   , datatype :: String
   , dateTime :: String
-  , defaultChecked :: String
+  , defaultChecked :: Boolean
   , defaultValue :: String
   , dir :: String
   , disabled :: Boolean
