@@ -13,6 +13,7 @@ module React.Basic.DOM
   , unmount
   , createPortal
   , text
+  , flushSync
   , module Generated
   ) where
 
@@ -101,3 +102,14 @@ foreign import createPortal :: JSX -> Element -> JSX
 -- | Create a text node.
 text :: String -> JSX
 text = unsafeCoerce
+
+-- | `flushSync` lets you force React to flush any updates inside the provided
+-- | callback synchronously. This ensures that the DOM is updated immediately.
+-- | 
+-- | ```purs
+-- | let
+-- |   handleNewChatMessage msg = do
+-- |     flushSync (setMessages (_ <> [msg]))
+-- |     scrollToLastMessage
+-- | ```
+foreign import flushSync :: forall a. Effect a -> Effect a

@@ -19,3 +19,7 @@ export function unmount(node) {
 export function createPortal(jsx) {
   return (node) => ReactDOM.createPortal(jsx, node);
 }
+
+export function flushSync(callback) {
+  return () => ReactDOM.flushSync(callback);
+}
