@@ -4310,6 +4310,7 @@ type Props_dialog =
   , onAnimationStart :: EventHandler
   , onBlur :: EventHandler
   , onClick :: EventHandler
+  , onClose :: EventHandler
   , onCompositionEnd :: EventHandler
   , onCompositionStart :: EventHandler
   , onCompositionUpdate :: EventHandler
