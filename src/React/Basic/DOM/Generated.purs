@@ -1,6 +1,9 @@
--- | ----------------------------------------
+-- | ------------------------------------------------------------
 -- | THIS FILE IS GENERATED -- DO NOT EDIT IT
--- | ----------------------------------------
+-- | Instead edit files under 'codegen/' dir and regenerate with:
+-- |     npm install
+-- |     node ./index.js
+-- | ------------------------------------------------------------
 
 module React.Basic.DOM.Generated where
 

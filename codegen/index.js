@@ -5,10 +5,15 @@ const htmlGenFile = "../src/React/Basic/DOM/Generated.purs";
 const htmlSimplifiedGenFile = "../src/React/Basic/DOM/Simplified/Generated.purs";
 const svgGenFile = "../src/React/Basic/DOM/SVG.purs";
 
-const htmlHeader = `-- | ----------------------------------------
+const warningHeader = `-- | ------------------------------------------------------------
 -- | THIS FILE IS GENERATED -- DO NOT EDIT IT
--- | ----------------------------------------
+-- | Instead edit files under 'codegen/' dir and regenerate with:
+-- |     npm install
+-- |     node ./index.js
+-- | ------------------------------------------------------------
+`;
 
+const htmlHeader = `${warningHeader}
 module React.Basic.DOM.Generated where
 
 import Data.Nullable (Nullable)
@@ -23,10 +28,7 @@ import Web.DOM (Node)
 
 `;
 
-const simplifiedHtmlHeader = `-- | ----------------------------------------
--- | THIS FILE IS GENERATED -- DO NOT EDIT IT
--- | ----------------------------------------
-
+const simplifiedHtmlHeader = `${warningHeader}
 module React.Basic.DOM.Simplified.Generated where
 
 import Data.Nullable (Nullable)
@@ -55,10 +57,7 @@ const propType = (e, p) => {
   }
 }
 
-const svgHeader = `-- | ----------------------------------------
--- | THIS FILE IS GENERATED -- DO NOT EDIT IT
--- | ----------------------------------------
-
+const svgHeader = `${warningHeader}
 module React.Basic.DOM.SVG where
 
 import Data.Nullable (Nullable)
