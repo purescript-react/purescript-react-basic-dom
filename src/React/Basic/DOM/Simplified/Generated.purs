@@ -1,6 +1,9 @@
--- | ----------------------------------------
+-- | ------------------------------------------------------------
 -- | THIS FILE IS GENERATED -- DO NOT EDIT IT
--- | ----------------------------------------
+-- | Instead edit files under 'codegen/' dir and regenerate with:
+-- |     npm install
+-- |     node ./index.js
+-- | ------------------------------------------------------------
 
 module React.Basic.DOM.Simplified.Generated where
 
@@ -3884,6 +3887,7 @@ type Props_dialog =
   , onAnimationStart :: EventHandler
   , onBlur :: EventHandler
   , onClick :: EventHandler
+  , onClose :: EventHandler
   , onCompositionEnd :: EventHandler
   , onCompositionStart :: EventHandler
   , onCompositionUpdate :: EventHandler

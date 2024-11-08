@@ -67,6 +67,7 @@ module.exports.types = {
   "onCanPlayThrough": "EventHandler",
   "onChange": "EventHandler",
   "onClick": "EventHandler",
+  "onClose": "EventHandler",
   "onCompositionEnd": "EventHandler",
   "onCompositionStart": "EventHandler",
   "onCompositionUpdate": "EventHandler",
